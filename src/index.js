@@ -1,10 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-// import App from './App';
 import { RouterProvider,createBrowserRouter } from 'react-router-dom';
 import Root from './Root/Root';
-import { AboutUs, ContactUs, Home } from './Pages';
+import { AboutUs, ContactUs, Error, Home } from './Pages';
 
 
 
@@ -14,7 +13,7 @@ const Route =createBrowserRouter([
     element:<Root/>,
     children:[
       {
-        path:"/",
+        path:"home",
         element:<Home/>
       },
       {
@@ -28,7 +27,7 @@ const Route =createBrowserRouter([
       },
       {
         path:"*",
-        element:<div>404 page not Found</div>
+        element:<Error/>
       },
     ]
   }
