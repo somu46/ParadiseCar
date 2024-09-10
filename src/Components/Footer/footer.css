@@ -8,11 +8,12 @@
     justify-content: center;
     font-weight: 300;
     color: black;
-    
+    border: 3px solid #dfdede;   
 }
 .element {
-    border-top: 3px solid #dfdede;
-    border-bottom: 1px dashed #F2F2F2; 
+   
+    border-bottom: 1px dashed #F2F2F2;
+     
   }
   
 .seva{

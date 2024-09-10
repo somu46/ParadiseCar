@@ -22,7 +22,7 @@ const Navbar = () => {
       /></a>
       
       <ul className="navbar-links">
-        <li><NavLink to="/home"
+        <li><NavLink to="/"
 
         className={({isActive})=>
             `${isActive?"text-yellow-400":"inherit"}`
