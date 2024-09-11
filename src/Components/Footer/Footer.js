@@ -3,11 +3,9 @@ import "./footer.css";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
- 
-
-  const handleHistory=()=>{
-    window.screenTop(0,0);
-  }
+  const handleHistory = () => {
+    window.screenTop(0, 0);
+  };
 
   return (
     <footer className="footer overflow-x-hidden min-w-[100%] shadow-lg rounded-lg ">
@@ -18,11 +16,13 @@ const Footer = () => {
               to="/"
               className="text-3xl font-bold m-3 text-left hover:text-pink-700 hover:scale-110 hover:border-2 transition-all duration-300 ease-in-out hover:tracking-wider "
             >
-              <p className="seva">Seva</p><p className="ride">Ride</p>
+              <p className="seva">Paradise </p>
+              <p className="ride">Car</p>
             </Link>
             <p className="text-sm ">
-              The driver showed concern by waiting after the drop, to make sure
-              the patient's home oxygen concentrator was working properly. 
+              At Paradise Car Rental, we pride ourselves on offering top-notch
+              car rental services tailored to meet the diverse needs of our
+              clients.
             </p>
           </div>
           <div className=" relative flex flex-wrap flex-col  max-w-[25%] h-auto text-black font-semibold m-3 p-4 min-h-9">
@@ -32,12 +32,18 @@ const Footer = () => {
             >
               <p>Training</p>
             </Link>
-            <Link to="/Services" className="text-sm items-start text-left m-1  hover:text-red-600 ">
+            <Link
+              to="/Services"
+              className="text-sm items-start text-left m-1  hover:text-red-600 "
+            >
               Driver Training
             </Link>
-            <Link to="###" className="text-sm items-start text-left m-1  hover:text-red-600 ">
+            {/* <Link
+              to="###"
+              className="text-sm items-start text-left m-1  hover:text-red-600 "
+            >
               Paramedical Training Institute
-            </Link>
+            </Link> */}
           </div>
           <div className=" relative flex flex-wrap flex-col  max-w-[25%] h-auto text-black font-semibold m-3 p-4 min-h-9">
             <Link
@@ -46,24 +52,34 @@ const Footer = () => {
             >
               <p>SERVICES</p>
             </Link>
-            <Link to="/Contact" onClick={handleHistory} className="text-sm items-start text-left m-1   hover:text-red-600 ">
+            <Link
+              to="/Contact"
+              onClick={handleHistory}
+              className="text-sm items-start text-left m-1   hover:text-red-600 "
+            >
               Contact Us
             </Link>
-            <Link to="###" className="text-sm items-start text-left m-1   hover:text-red-600 ">
+            <Link
+              to="###"
+              className="text-sm items-start text-left m-1   hover:text-red-600 "
+            >
               Payment Methods
             </Link>
-            <Link to="/Services" className="text-sm  items-start text-left m-1  hover:text-red-600 ">
+            <Link
+              to="/Services"
+              className="text-sm  items-start text-left m-1  hover:text-red-600 "
+            >
               Delivary
             </Link>
-            <Link to="###" className="text-sm items-start text-left m-1  hover:text-red-600 ">
+            <Link
+              to="###"
+              className="text-sm items-start text-left m-1  hover:text-red-600 "
+            >
               Return & Exchanges
             </Link>
           </div>
           <div className=" relative flex flex-wrap flex-col  max-w-[25%] h-auto text-black font-semibold m-3 p-4 min-h-9">
-            <p
-              
-              className="text-xl font-bold m-3 border-b-2 border-red-600 max-w-[120px]  hover:text-red-600 "
-            >
+            <p className="text-xl font-bold m-3 border-b-2 border-red-600 max-w-[120px]  hover:text-red-600 ">
               NEWSLETTER
             </p>
             <p className="text-sm items-start text-left m-1 ">
@@ -71,23 +87,26 @@ const Footer = () => {
               promos!
             </p>
             <div className="relative flex  flex-row m-3">
-              <input type="email" name="Email" id="" className=" border-gray-500 rounded-xl w-full md:w-64 lg:w-75 xl:w-120 border px-4 py-2" />
+              <input
+                type="email"
+                name="Email"
+                id=""
+                className=" border-gray-500 rounded-xl w-full md:w-64 lg:w-75 xl:w-120 border px-4 py-2"
+              />
               <button
                 type="submit"
-               className=" bg-sky-500 rounded-md ml-3  p-2 border shadow-md cursor-pointer hover:scale-105 transition duration-300 ease-in-out "
+                className=" bg-sky-500 rounded-md ml-3  p-2 border shadow-md cursor-pointer hover:scale-105 transition duration-300 ease-in-out "
               >
-                <p className=" text-white">
-                  Submit
-                </p>
+                <p className=" text-white">Submit</p>
               </button>
             </div>
           </div>
         </div>
-        
+
         <div className="relative flex flex-wrap flex-row justify-evenly min-w-screen m-3 p-1 border-t-2 border-[#292929] min-w-[75%]">
           <p className="text-black font-semibold">
             Copyright © 2024 All rights reserved | This Awesome site is made
-            with SASSS  Group
+            with SASSS Group
           </p>
         </div>
       </div>
