@@ -4,11 +4,6 @@ import BookNowButton from "../Button/Button";
 const BookNowCom = () => {
   const [selectedTab, setSelectedTab] = useState("oneWay");
 
-
-
-
-  
-
   return (
     <div className="flex flex-col items-center bg-white rounded-lg p-8 shadow-lg w-3/4 mx-auto border-2">
       {/* Tabs */}
@@ -158,7 +153,6 @@ const BookNowCom = () => {
         <div className="flex flex-wrap ustify-between items-center min-w-full px-0  mx-0 overflow-hidden">
           <from className="flex flex-wrap justify-between  min-w-full  mx-0 px-0 ">
             <div className=" flex flex-wrap flex-col  mx-0 md:w-1/5   ">
-
 
               <label className="text-start text-base font-bold">TRIP</label>
               <select className="  max-w-full border-2 border-b-black border-gray-300 rounded-lg p-3">
