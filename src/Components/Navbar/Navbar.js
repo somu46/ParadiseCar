@@ -15,11 +15,12 @@ const Navbar = () => {
 
   return (
     <nav className={`navbar ${isDarkMode ? 'dark' : 'light'}`}>
-      <img
+        <a href='https://paradisecar.in/'><img
         src={isDarkMode ? Dark_Logo : Light_Logo}
         alt="Paradise Car Rental"
         className="navbar-logo"
-      />
+      /></a>
+      
       <ul className="navbar-links">
         <li><NavLink to="/"
 
