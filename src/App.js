@@ -1,5 +1,5 @@
 import './App.css';
-import BookNowCom from './Components/BookNowCom.js/BookNowCom';
+import BookNowCom from './Components/BookNowComponent/BookNowCom';
 // import BookNowButton from './Components/Button/Button';
 import { Home } from './Pages';
 // import Navbar from './Components/Navbar/Navbar';
