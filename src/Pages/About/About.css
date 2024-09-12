@@ -1,0 +1,72 @@
+.about-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    background-color: #f8f8f8;
+    margin-top: 60px;
+  }
+  
+  .about-wrapper {
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 900px;
+    width: 100%;
+  }
+  
+  .about-image {
+    align-self: center;
+    margin-right: 20px;
+    margin-left: 15px;
+  }
+  
+  .profile-image {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .about-image h3 {
+    margin-top: 15px;
+    font-size: 1.2rem;
+    font-weight: 700;
+  }
+  
+  .about-content {
+    flex: 1;
+    font-size: 1rem;
+    color: #333;
+  }
+  
+  .about-content p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  
+  .book-now {
+    background-color: #feca1b;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: black;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .book-now i {
+    font-size: 1.2rem;
+  }
+  
+  .book-now:hover {
+    background-color: #e5b614;
+  }
+  
