@@ -1,3 +1,6 @@
+
+
+
 const BookNowButton = ({ onClick, label = "Book Now" }) => {
     return (
       <button
