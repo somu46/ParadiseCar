@@ -7,7 +7,6 @@ const AboutUs = () => {
   return (
     <div className="about-section flex flex-wrap flex-col">
       <div className="about-wrapper">
-
         <div className="about-image">
           <img src={CEO} alt="Sudipto Karmakar" className="profile-image"/>
           <h3>SUDIPTA KARMAKAR</h3>
@@ -29,7 +28,6 @@ const AboutUs = () => {
             making every journey a memorable one.
           </p>
         </div>
-        
       </div>
       <div className="flex flex-wrap border-2 border-red-500 min-w-full pt-0 h-auto">
       <ContactUs/>
@@ -37,5 +35,4 @@ const AboutUs = () => {
     </div>
   );
 };
-
 export default AboutUs;

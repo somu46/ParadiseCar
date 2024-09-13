@@ -2,7 +2,6 @@
     font-size: small;
     /* font-style: italic; */
     /* width: 100vw; */
-    background: white;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -24,3 +23,18 @@
     color:#e50614 ;
     display: inline;
 }
+/*chatgpt*/
+.footer.light {
+    background-color: #ffffff;
+    color: #333333;
+  }
+  
+  .footer.dark {
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+  }
+  
+  .footer .text-black {
+    color: inherit; /* Inherit the color based on dark or light mode */
+  }
+  

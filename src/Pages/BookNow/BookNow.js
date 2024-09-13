@@ -62,13 +62,10 @@ const handelSubmit=()=>{
                  </div>
                  <div className=" flex flex-wrap flex-col w-full">
                 <label>
-                Drop Date
+                PickUp Time
                 </label>
-                <input
-                  type="date"
-                  placeholder="Dropup Date"
-                  className="p-3 border-2 border-gray-300 rounded-lg "
-                />
+    
+                <input aria-label="AM/PM" type="time" />
                 </div>
               </div>
 
