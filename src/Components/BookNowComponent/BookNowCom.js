@@ -156,7 +156,7 @@ const BookNowCom = () => {
         </div>
       )}
 
-      {/* roundTrip- Form */}
+      {/* airport- Form */}
 
       {selectedTab === "airport" && (
         <div className="flex flex-wrap ustify-between items-center min-w-full px-0  mx-0 overflow-hidden">

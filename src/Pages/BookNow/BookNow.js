@@ -1,8 +1,12 @@
+import React ,{ useState } from "react";
 import BookNowButton from "../../Components/Button/Button";
 import BookNowCarImg from "./../../Assets/BookNowCarImg.svg";
 
 const BookNow = () => {
-
+const [airportOpt,setAirportOpt]=useState("")
+const handleSelectChange=(value)=>{
+  setAirportOpt(value)
+}
 const handelSubmit=()=>{
   alert("Book Now open .....")
 }
@@ -67,6 +71,28 @@ const handelSubmit=()=>{
                 />
                 </div>
               </div>
+
+              <div className="flex flex-wrap flex-col">
+                <label>
+                  Trip Type
+                </label>
+           
+                <select onChange={(e) => handleSelectChange(e.target.value) }className="p-3 border-2 border-gray-300 rounded-lg">
+                  <option >Please select a Trip</option>
+                  <option value="oneWay">ONE WAY</option>
+                  <option value="roundTrip">ROUND TRIP</option>
+                  <option value="airPort">AIRPORT
+                  </option>
+              </select>
+
+                { airportOpt==="airPort" &&  <select>
+                          <option value="DropToAirport">Drop to Airport</option>
+                          <option value="PickFromAirport">Pickup from Airport</option>
+                       </select>
+
+}
+              </div>
+
              <div>
               <BookNowButton onClick={handelSubmit} label="Rent Now " />
              </div>
