@@ -85,9 +85,11 @@ const handelSubmit=()=>{
                   </option>
               </select>
 
-                { airportOpt==="airPort" &&  <select>
+                { airportOpt==="airPort" &&  <select className=" flex items-center mt-5 justify-center p-3 border-2 max-w-[50%] border-gray-300 rounded-lg">
+                        <option >Please select type</option>
                           <option value="DropToAirport">Drop to Airport</option>
                           <option value="PickFromAirport">Pickup from Airport</option>
+                         
                        </select>
 
 }
