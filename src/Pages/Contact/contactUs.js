@@ -8,6 +8,7 @@ const ContactUs = () => {
       <div className=" mt-[10rem] min-h-screen flex justify-center font-semibold text-3xl ">
       <ContactForm className="mr- [5rem]"/>
       <Office/>
+      
       </div>
     </>
     );

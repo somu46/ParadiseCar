@@ -6,7 +6,6 @@ const AboutUs = () => {
   return (
     <div className="about-section">
       <div className="about-wrapper">
-
         <div className="about-image">
           <img src={CEO} alt="Sudipto Karmakar" className="profile-image"/>
           <h3>SUDIPTA KARMAKAR</h3>
@@ -28,11 +27,9 @@ const AboutUs = () => {
             making every journey a memorable one.
           </p>
         </div>
-        
       </div>
       <ContactFrom/>
     </div>
   );
 };
-
 export default AboutUs;
