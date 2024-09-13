@@ -7,7 +7,16 @@ const BookNowCom = () => {
   return (
     <div className="flex flex-col items-center bg-white rounded-lg p-8 shadow-lg w-3/4 mx-auto border-2">
       {/* Tabs */}
-      <div className="flex space-x-8 mb-6">
+
+      <div className=" w-full  flex space-x-8 mb-6">
+      <span className="flex  p-0 left-0  mx-4">
+          <input
+          type="text"
+          placeholder="Enter Full Name"
+          className=" w-full  p-2  border-2 border-b-black border-gray-300 rounded-lg "
+          required
+          />
+        </span>
         <span
           className={`font-bold hover:text-yellow-300 cursor-pointer pb-2 transition ease-in duration-300 ${
             selectedTab === "oneWay"
@@ -147,7 +156,7 @@ const BookNowCom = () => {
         </div>
       )}
 
-      {/* roundTrip- Form */}
+      {/* airport- Form */}
 
       {selectedTab === "airport" && (
         <div className="flex flex-wrap ustify-between items-center min-w-full px-0  mx-0 overflow-hidden">
