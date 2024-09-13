@@ -1,6 +1,7 @@
 import React from "react";
 import './About.css';
 import CEO from '../../Assets/CEO.jpeg'
+import ContactFrom from "../../Components/ContactFrom/ContactFrom";
 const AboutUs = () => {
   return (
     <div className="about-section">
@@ -27,8 +28,9 @@ const AboutUs = () => {
             making every journey a memorable one.
           </p>
         </div>
-
+        
       </div>
+      <ContactFrom/>
     </div>
   );
 };
