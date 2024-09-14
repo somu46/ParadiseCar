@@ -13,7 +13,7 @@ const handelSubmit=()=>{
 
   return (
     <>
-      <div className="mt-[6rem] flex justify-center items-center h-screen">
+      <div className="mt-[6rem] w-full flex justify-center items-center h-screen">
         <div className="flex flex-wrap justify-between bg-sky-100 border-2 shadow-lg rounded-md w-[80%] min-h-[70%] p-1 overflow-hidden" >
           {/* Left Section (Form & Text) */}
           <div className="w-full md:w-1/2 flex flex-col justify-start p-5">
