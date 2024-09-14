@@ -1,6 +1,6 @@
 import React from "react";
 import './About.css';
-import CEO from '../../Assets/CEO.jpeg'
+// import CEO from '../../Assets/CEO.jpeg'
 // import ContactFrom from "../../Components/ContactFrom/ContactFrom";
 import  { ContactComponent } from "../Contact/contactUs";
 const AboutUs = () => {
@@ -8,7 +8,7 @@ const AboutUs = () => {
     <div className="about-section flex flex-wrap flex-col">
       <div className="about-wrapper">
         <div className="about-image">
-          <img src={CEO} alt="Sudipto Karmakar" className="profile-image"/>
+          <img  alt="CEO" className="profile-image"/>
           <h3>SUDIPTA KARMAKAR</h3>
         </div>
 
