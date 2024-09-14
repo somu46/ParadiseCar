@@ -1,14 +1,13 @@
 import React from "react";
 import './About.css';
-// import CEO from '../../Assets/CEO.jpeg'
-// import ContactFrom from "../../Components/ContactFrom/ContactFrom";
-import  { ContactComponent } from "../Contact/contactUs";
+import { ContactComponent } from "../Contact/contactUs";
+
 const AboutUs = () => {
   return (
     <div className="about-section flex flex-wrap flex-col">
       <div className="about-wrapper">
         <div className="about-image">
-          <img  alt="CEO" className="profile-image"/>
+          <img alt="CEO" className="profile-image" />
           <h3>SUDIPTA KARMAKAR</h3>
         </div>
 
@@ -29,10 +28,11 @@ const AboutUs = () => {
           </p>
         </div>
       </div>
-      <div className="flex flex-wrap border-2  min-w-full pt-0 h-auto">
-      <ContactComponent/>
+      <div className="flex flex-wrap border-2 min-w-full pt-0 h-auto">
+        <ContactComponent />
       </div>
     </div>
   );
 };
+
 export default AboutUs;

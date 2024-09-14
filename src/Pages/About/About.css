@@ -1,93 +1,120 @@
 .about-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 40px;
-    background-color: #f8f8f8;
-    margin-top: 60px;
-  }
-  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  background-color: #f8f8f8;
+  margin-top: 60px;
+}
+
+.about-wrapper {
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 900px;
+  width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
   .about-wrapper {
-    display: flex;
-    flex-direction: row;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    max-width: 900px;
-    width: 100%;
+    flex-direction: column;
+    padding: 15px;
   }
-  
+
   .about-image {
     align-self: center;
-    margin-right: 20px;
-    margin-left: 15px;
+    margin: 0 auto 20px;
   }
-  
-  .profile-image {
-    -webkit-animation: morph 8s ease-in-out infinite;
-    animation: morph 8s ease-in-out infinite;
-    background-image: url(/src/Assets/CEO.jpeg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    border: 3px solid #2d2e32;
-    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-    height: 15rem;
-    width: 15rem;
-    transition: all 1s ease-in-out;
-    position: relative;
-  }
-  
-  @keyframes morph {
-    0% {
-      border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-    }
-    50% {
-      border-radius: 30% 60% 70% 40% / 40% 70% 30% 60%;
-    }
-    100% {
-      border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-    }
-  }
-  
-  
-  .about-image h3 {
-    margin-top: 15px;
-    font-size: 1.2rem;
-    font-weight: 700;
-  }
-  
+
   .about-content {
-    flex: 1;
-    font-size: 1rem;
-    color: #333;
+    text-align: center;
   }
-  
-  .about-content p {
-    line-height: 1.6;
-    margin-bottom: 20px;
+
+  .profile-image {
+    height: 12rem;
+    width: 12rem;
   }
-  
-  .book-now {
-    background-color: #feca1b;
-    border: none;
-    padding: 10px 20px;
-    font-size: 1rem;
-    font-weight: 600;
-    color: black;
-    border-radius: 5px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 10px;
+}
+
+.about-image {
+  align-self: center;
+  margin-right: 20px;
+  margin-left: 15px;
+}
+
+.profile-image {
+  -webkit-animation: morph 8s ease-in-out infinite;
+  animation: morph 8s ease-in-out infinite;
+  background-image: url(/src/Assets/CEO.jpeg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 3px solid #2d2e32;
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  height: 15rem;
+  width: 15rem;
+  transition: all 1s ease-in-out;
+  position: relative;
+}
+
+@keyframes morph {
+  0% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
   }
-  
-  .book-now i {
-    font-size: 1.2rem;
+  50% {
+    border-radius: 30% 60% 70% 40% / 40% 70% 30% 60%;
   }
-  
-  .book-now:hover {
-    background-color: #e5b614;
+  100% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
   }
-  
+}
+
+.about-image h3 {
+  margin-top: 15px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.about-content {
+  flex: 1;
+  font-size: 1rem;
+  color: #333;
+}
+
+.about-content p {
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* Contact Component Wrapper */
+.contact-section {
+  margin-top: 30px;
+  width: 100%;
+}
+
+.book-now {
+  background-color: #feca1b;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: black;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.book-now i {
+  font-size: 1.2rem;
+}
+
+.book-now:hover {
+  background-color: #e5b614;
+}

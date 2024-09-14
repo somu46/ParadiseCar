@@ -4,11 +4,11 @@ import Office from "../../Components/Office/Office";
 const ContactComponent = () => {
   return (
     <>
-      <div className=" mt-[4rem]  w-full max-h-full flex flex-col justify-center px-3">
-        <div className="flex  justify-center text-4xl font-bold text-sky-900 flex-wrap w-full  ">
+      <div className="mt-16 w-full flex flex-col justify-center px-3">
+        <div className="flex justify-center text-4xl font-bold text-sky-900 flex-wrap w-full text-center">
           <p> Get in touch</p>
         </div>
-        <div className="  min-h-auto  w-[90%] flex justify-center font-semibold text-3xl mx-10 mb-10">
+        <div className="w-full flex flex-col lg:flex-row justify-center font-semibold text-2xl lg:text-3xl mx-5 lg:mx-10 mb-10 space-y-5 lg:space-y-0 lg:space-x-5">
           <ContactForm />
           <Office />
         </div>
@@ -20,31 +20,12 @@ const ContactComponent = () => {
 const ContactUs = () => {
   return (
     <>
-      <div className="flex flex-wrap mt-[8rem]" >
-      <ContactComponent/>
+      <div className="flex flex-wrap mt-32 lg:mt-24">
+        <ContactComponent />
       </div>
     </>
   );
 };
 
-export {ContactComponent};
+export { ContactComponent };
 export default ContactUs;
-
-{
-  /* import Office from '../../Components/Office/Office'
-import { FiFacebook, FiInstagram } from "react-icons/fi";
-import { SiGooglemaps } from "react-icons/si";
-
-const ContactUs = () => {
-    return (
-      <>
-      <div className=" mt-[10rem] min-h-screen flex justify-center font-semibold text-3xl ">
-      <div className="flex  justify-center text-4xl font-bold text-sky-900 flex-wrap w-full  ">
-           <p> Get in touch</p>
-      </div>
-      <ContactForm className="mr-[5rem]"/>
-      <Office/>
-      <FiFacebook/>
-      <FiInstagram/>
-      <SiGooglemaps/> */
-}
