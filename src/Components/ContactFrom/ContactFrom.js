@@ -4,8 +4,8 @@ import BookNowButton from '../Button/Button';
 
 const ContactForm = () => {
   return (
-    <div className="contact-form-container m-1 w-full lg:w-1/2 p-3">
-      <form className="contact-form mx-3 py-5 px-5">
+    <div className=" contact-form-container m-0 lg:m-1 w-full lg:w-1/2 p-0 lg:p-3">
+      <form className="  contact-form mx-0 px-0 lg:mx-3 py-5 lg:px-5">
         <label className="text-center dark:text-sky-900 text-inherit">
           DO YOU HAVE ANY QUESTIONS?
         </label>
