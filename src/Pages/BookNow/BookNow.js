@@ -13,8 +13,8 @@ const handelSubmit=()=>{
 
   return (
     <>
-      <div className="mt-[6rem] w-full flex justify-center items-center h-screen">
-        <div className="flex flex-wrap justify-between bg-sky-100 border-2 shadow-lg rounded-md w-[80%] min-h-[70%] p-1 overflow-hidden" >
+      <div className="mt-[6rem] w-full mb-[15rem] lg:mb-3 lg:h-auto flex justify-center items-center ">
+        <div className="flex flex-wrap flex-col lg:flex-row justify-between bg-sky-100 border-2 shadow-lg rounded-md w-[80%] h-full lg:min-h-[70%] p-1 lg:overflow-hidden" >
           {/* Left Section (Form & Text) */}
           <div className="w-full md:w-1/2 flex flex-col justify-start p-5">
             <div className="mb-6">
@@ -99,11 +99,11 @@ const handelSubmit=()=>{
           </div>
 
           {/* Right Section (Image) */}
-          <div className="hidden md:flex md:w-1/2  right-0 top-0 overflow-hidden">
+          <div className=" md:flex md:w-1/2  right-0 top-0 md:overflow-hidden">
             <img
               src={BookNowCarImg}
               alt="Book Now Car"
-              className="min-w-full min-h-full object-cover shadow-md rounded-md"
+              className="min-w-full lg:min-h-full object-cover shadow-md rounded-md"
             />
           </div>
         </div>
