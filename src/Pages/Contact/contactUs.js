@@ -1,6 +1,24 @@
 import ContactForm from "../../Components/ContactFrom/ContactFrom";
 import Office from "../../Components/Office/Office";
 
+// const ContactComponent = () => {
+//   return (
+//     <>
+//       <div className="mt-16 w-full lg:max-auto flex flex-col justify-center px-3 ">
+//         <div className="flex justify-center text-4xl font-bold text-sky-900 flex-wrap w-full lg:max-w-auto  text-center ">
+//           <p> Get in touch</p>
+//         </div>
+//         <div className="w-full lg:max-w-auto flex flex-col lg:flex-row justify-center font-semibold text-2xl lg:text-3xl mx-5 lg:mx-10 mb-10 space-y-5 lg:space-y-0 lg:overflow-hidden">
+//           <ContactForm />
+//           <Office />
+//         </div>
+//       </div>
+//     </>
+//   );
+// };
+
+
+
 const ContactComponent = () => {
   return (
     <>
@@ -8,7 +26,7 @@ const ContactComponent = () => {
         <div className="flex justify-center text-4xl font-bold text-sky-900 flex-wrap w-full text-center">
           <p> Get in touch</p>
         </div>
-        <div className="w-full flex flex-col lg:flex-row justify-center font-semibold text-2xl lg:text-3xl mx-5 lg:mx-10 mb-10 space-y-5 lg:space-y-0 lg:space-x-5">
+        <div className="w-full lg:max-w-6xl flex flex-col lg:flex-row justify-center font-semibold text-2xl lg:text-3xl mx-auto mb-10 space-y-5 lg:space-y-0 overflow-hidden">
           <ContactForm />
           <Office />
         </div>
