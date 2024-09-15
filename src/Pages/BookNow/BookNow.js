@@ -19,8 +19,8 @@ const BookNow = () => {
 
   return (
     <>
-      <div className="mt-[6rem] w-full mb-[15rem] lg:mb-3 lg:h-auto flex justify-center items-center ">
-        <div className="flex flex-wrap flex-col lg:flex-row justify-between bg-sky-100 border-2 shadow-lg rounded-md w-[80%] h-full lg:min-h-[70%] p-1 lg:overflow-hidden">
+      <div className="mt-[0.25rem] w-full mb-[15rem] lg:mb-3 lg:h-auto flex justify-center items-center ">
+        <div className="flex flex-wrap flex-col lg:flex-row justify-between bg-sky-100 border-2 shadow-lg rounded-md w-[100%] h-full lg:min-h-[70%] p-1 lg:overflow-hidden">
           {/* Left Section (Form & Text) */}
           <div className="w-full md:w-1/2 flex flex-col justify-start p-5">
             <div className="mb-6">
