@@ -4,7 +4,7 @@ import { ContactComponent } from "../Contact/contactUs";
 
 const AboutUs = () => {
   return (
-    <div className="about-section flex flex-wrap flex-col">
+    <div className="about-section flex flex-wrap flex-col ">
       <div className="about-wrapper">
         <div className="about-image">
           <img alt="CEO" className="profile-image" />
@@ -28,8 +28,8 @@ const AboutUs = () => {
           </p>
         </div>
       </div>
-      <div className="flex flex-wrap  w-full pt-0 h-auto">
-        <ContactComponent/>
+      <div className="flex flex-wrap  w-full p-0 h-auto  mx-0 ">
+        <ContactComponent />
       </div>
     </div>
   );
