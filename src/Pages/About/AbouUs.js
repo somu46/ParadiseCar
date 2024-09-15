@@ -28,8 +28,8 @@ const AboutUs = () => {
           </p>
         </div>
       </div>
-      <div className="flex flex-wrap border-2 min-w-full pt-0 h-auto">
-        <ContactComponent />
+      <div className="flex flex-wrap min-w-full pt-0 h-auto">
+        <ContactComponent/>
       </div>
     </div>
   );
