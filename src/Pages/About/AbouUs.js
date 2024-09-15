@@ -28,9 +28,11 @@ const AboutUs = () => {
           </p>
         </div>
       </div>
+
       <div className="flex flex-wrap  w-full p-0 h-auto  mx-0 ">
         <ContactComponent />
-      </div>
+
+      
     </div>
   );
 };

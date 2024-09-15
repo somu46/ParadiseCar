@@ -1,9 +1,6 @@
 import ContactForm from "../../Components/ContactFrom/ContactFrom";
 import Office from "../../Components/Office/Office";
 
-
-
-
 const ContactComponent = () => {
   return (
     <>
