@@ -7,4 +7,5 @@ import BookNow from "./BookNow/BookNow";
 
 
 
-export { Home,ContactUs,AboutUs,BookNow, Error};
+
+export { Home,ContactUs,AboutUs,BookNow, Error };

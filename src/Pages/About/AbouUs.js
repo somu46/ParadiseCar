@@ -27,6 +27,8 @@ const AboutUs = () => {
             making every journey a memorable one.
           </p>
         </div>
+        <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+        <div class="elfsight-app-a59345fd-ef81-464b-be8a-c3da5e80dcb6" data-elfsight-app-lazy></div>
       </div>
 
       <div className="flex flex-wrap  w-full p-0 h-auto  mx-0 ">
