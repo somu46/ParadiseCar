@@ -18,27 +18,7 @@
   width: 100%;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  .about-wrapper {
-    flex-direction: column;
-    padding: 15px;
-  }
 
-  .about-image {
-    align-self: center;
-    margin: 0 auto 20px;
-  }
-
-  .about-content {
-    text-align: center;
-  }
-
-  .profile-image {
-    height: 12rem;
-    width: 12rem;
-  }
-}
 
 .about-image {
   align-self: center;
@@ -117,4 +97,43 @@
 
 .book-now:hover {
   background-color: #e5b614;
+}
+
+.feedback {
+  width: 100%;
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #090909;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 150px;
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-wrapper {
+    flex-direction: column;
+    padding: 15px;
+  }
+  .feedback {
+    padding: 15px;
+    min-height: 120px;
+  }
+
+  .about-image {
+    align-self: center;
+    margin: 0 auto 20px;
+  }
+
+  .about-content {
+    text-align: center;
+  }
+
+  .profile-image {
+    height: 12rem;
+    width: 12rem;
+  }
 }
