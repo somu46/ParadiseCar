@@ -4,7 +4,10 @@ import BookNowCarImg from "./../../Assets/BookNowCarImg.svg";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
-const BookNow = () => {
+
+
+
+const BookNowPageCom=()=>{
   const [selectedPicupDate, setSelectedpicupDate] = useState(null);
   const [selectedDropoffDate, setSelectedDropoffDate] = useState(null);
   const [airportOpt, setAirportOpt] = useState("");
@@ -19,7 +22,7 @@ const BookNow = () => {
 
   return (
     <>
-      <div className="mt-[0.25rem] w-full mb-[15rem] lg:mb-3 lg:h-auto flex justify-center items-center ">
+      <div className="mt-[0.25rem] w-full lg:w-[80%] mb-[15rem] lg:mb-3 lg:h-auto flex justify-center items-center ">
         <div className="flex flex-wrap flex-col lg:flex-row justify-between bg-sky-100 border-2 shadow-lg rounded-md w-[100%] h-full lg:min-h-[70%] p-1 lg:overflow-hidden">
           {/* Left Section (Form & Text) */}
           <div className="w-full md:w-1/2 flex flex-col justify-start p-5">
@@ -131,6 +134,22 @@ const BookNow = () => {
       </div>
     </>
   );
+}
+
+
+const BookNow = () => {
+  
+return(
+  <>
+  <div className="border-2  shadow-sm rounded-md mt-[6rem] min-w-full min-h-screen flex flex-col items-center p-3 my-5">
+  <BookNowPageCom/>
+  </div>
+  
+  </>
+);
+  
 };
+
+export {BookNowPageCom};
 
 export default BookNow;
