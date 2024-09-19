@@ -4,20 +4,19 @@ import { ContactComponent } from "../Contact/contactUs";
 
 const AboutUs = () => {
   
- 
-    useEffect(() => {
-      // Dynamically load the ElfSight script after the component mounts
-      const script = document.createElement('script');
-      script.src = "https://static.elfsight.com/platform/platform.js";
-      script.defer = true;
-      script.dataset.useServiceCore = true; // Correct way to set custom data attributes
-      document.body.appendChild(script);
-  
-      // Clean up the script when the component unmounts
-      return () => {
-        document.body.removeChild(script);
-      };
-    }, []);
+  useEffect(() => {
+    // Dynamically load the ElfSight script after the component mounts
+    const script = document.createElement('script');
+    script.src = "https://static.elfsight.com/platform/platform.js";
+    script.defer = true;
+    script.dataset.useServiceCore = true;
+    document.body.appendChild(script);
+    
+    // Clean up the script when the component unmounts
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
 
   return (
     <div className="about-section flex flex-wrap flex-col ">
@@ -44,15 +43,17 @@ const AboutUs = () => {
           </p>
         </div>
       </div>
- {/* Feedback section */}
- <div className="feedback ">
- <div className="elfsight-app-0fe48b35-7f45-48ea-a0ec-79b3de4fc606" data-elfsight-app-lazy></div>
+
+      <div className="feedback">
+        <div className="elfsight-app-a59345fd-ef81-464b-be8a-c3da5e80dcb6" data-elfsight-app-lazy></div>
       </div>
+      
       <div className="flex flex-wrap w-full p-0 h-auto mx-0 ">
         <ContactComponent />
       </div>
 
-     
+      {/* Feedback section */}
+      
 
     </div>
   );
