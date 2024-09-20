@@ -44,7 +44,8 @@ const AboutUs = () => {
         </div>
       </div>
 
-      <div className="feedback">
+   {/* Feedback section */}
+   <div className="min-w-full min-h-auto my-3">
         <div className="elfsight-app-a59345fd-ef81-464b-be8a-c3da5e80dcb6" data-elfsight-app-lazy></div>
       </div>
       
@@ -52,8 +53,7 @@ const AboutUs = () => {
         <ContactComponent />
       </div>
 
-      {/* Feedback section */}
-      
+     
 
     </div>
   );
