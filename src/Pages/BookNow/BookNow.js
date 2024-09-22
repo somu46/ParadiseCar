@@ -59,11 +59,11 @@ const BookNowPageCom = () => {
               className="flex flex-wrap flex-col gap-4"
               onSubmit={handleSubmit(FromData)}
             >
-              <div className="  flex  justify-between gap-4 mb-3">
+              <div className="  flex flex-wrap lg:flex-nowrap justify-center lg:justify-between gap-4 mb-3">
                 <input
                   type="text"
                   placeholder="Full Name"
-                  className="p-3 border-2 border-gray-300 rounded-lg w-1/2 "
+                  className="p-3 border-2 border-gray-300 rounded-lg w-1/2 mb-3 lg:mb-0 "
                   {...register("fullName", {
                     required: true,
                   })}
@@ -76,7 +76,7 @@ const BookNowPageCom = () => {
                 <input
                   type="text"
                   placeholder="10 Digit Mobile No"
-                  className="p-3 border-2 border-gray-300 rounded-lg w-1/2"
+                  className="p-3 border-2 border-gray-300 rounded-lg w-1/2 mb-3 lg:mb-0"
                   {...register("MobileNum", {
                     required: true,
                     pattern: {
@@ -86,8 +86,8 @@ const BookNowPageCom = () => {
                   })}
                 />
                 {errors.MobileNum && (
-                  <p className="absolute  left-[27rem] flex mt-[2.8rem]  p-1  text-orange-600">
-                    {errors.MobileNum.message || "*Mobile Number is required."}
+                  <p className="absolute left-[5rem]  lg:left-[27rem] flex lg:mt-[2.8rem] bottom-10 lg:bottom-auto  p-1  text-orange-600">
+                    {errors.MobileNum.message || "* Mobile Number is required."}
                   </p>
                 )}
               </div>
