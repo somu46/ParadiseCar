@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 import BookNowButton from "../../Components/Button/Button";
 import BookNowCarImg from "./../../Assets/BookNowCarImg.svg";
@@ -9,11 +9,11 @@ const BookNowPageCom = () => {
   const [selectedPicupDate, setSelectedpicupDate] = useState(null);
   const [selectedDropoffDate, setSelectedDropoffDate] = useState(null);
   const [airportOpt, setAirportOpt] = useState(" ");
+  const formRef=useRef()
 
-  // for srom data submmistion
-
+  
   const [err, setErr] = useState("");
-
+  
   const {
     register,
     setValue, //manualy update value
@@ -22,8 +22,12 @@ const BookNowPageCom = () => {
     handleSubmit,
     formState: { errors },
   } = useForm();
+  
+  
+  // for srom data submmistion
 
-  const FromData = (data) => {
+  const handleBookFromData = (data) => {
+  
     setErr(""); // at frist we counter error as empty
 
     try {
@@ -33,6 +37,7 @@ const BookNowPageCom = () => {
       let value = sessionStorage.getItem("BookingName");
 
       console.log(value);
+      formRef.current.reset();
     } catch (error) {
       setErr(error);
       console.log(err);
@@ -57,13 +62,14 @@ const BookNowPageCom = () => {
 
             <form
               className="flex flex-wrap flex-col gap-4"
-              onSubmit={handleSubmit(FromData)}
+              onSubmit={handleSubmit(handleBookFromData)}
+              ref={formRef} 
             >
               <div className="  flex flex-wrap lg:flex-nowrap justify-center lg:justify-between gap-4 mb-3">
                 <input
                   type="text"
                   placeholder="Full Name"
-                  className="p-3 border-2 border-gray-300 rounded-lg w-1/2 mb-3 lg:mb-0 "
+                  className="p-3 border-2 border-gray-300 rounded-lg w-full lg:w-1/2 mb-3 lg:mb-0 "
                   {...register("fullName", {
                     required: true,
                   })}
@@ -76,7 +82,7 @@ const BookNowPageCom = () => {
                 <input
                   type="text"
                   placeholder="10 Digit Mobile No"
-                  className="p-3 border-2 border-gray-300 rounded-lg w-1/2 mb-3 lg:mb-0"
+                  className="p-3 border-2 border-gray-300 rounded-lg w-full lg:w-1/2 mb-3 lg:mb-0"
                   {...register("MobileNum", {
                     required: true,
                     pattern: {
@@ -131,7 +137,7 @@ const BookNowPageCom = () => {
                     timeFormat="hh:mm aa"
                     timeIntervals={15}
                     dateFormat="MMMM d, yyyy h:mm aa"
-                    className="p-3 border-2 border-gray-300 rounded-lg "
+                    className="p-3 border-2 border-gray-300 rounded-lg w-full "
                     placeholderText="Select Pickup Date and Time"
 
                     // {
@@ -180,8 +186,8 @@ const BookNowPageCom = () => {
                     timeFormat="hh:mm aa"
                     timeIntervals={15}
                     dateFormat="MMMM d, yyyy h:mm aa"
-                    className="p-3 border-2 border-gray-300 rounded-lg"
-                    placeholderText="Select Drop Date "
+                    className="p-3 border-2 border-gray-300 rounded-lg w-full"
+                    placeholderText="Select Drop off  Date and Time"
                   />
                   {/* Manually setting the required validation */}
                   <input
