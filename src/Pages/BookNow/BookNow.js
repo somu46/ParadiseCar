@@ -13,33 +13,30 @@ const BookNowPageCom = () => {
   // for srom data submmistion
 
   const [err, setErr] = useState("");
+
   const {
     register,
     setValue, //manualy update value
+    setError, // Manually set an error
+    clearErrors, // Clear the error when needed
     handleSubmit,
     formState: { errors },
   } = useForm();
 
-
-  // const handleSelectChange = (value) => {
-  //   setAirportOpt(value);
-  // };
   const FromData = (data) => {
     setErr(""); // at frist we counter error as empty
 
     try {
       console.log(data);
-      console.log("seledPicupDate",selectedPicupDate)
-      console.log("DropoffDate",selectedDropoffDate)
-      console.log("airportOpt",airportOpt)
-      
-       
+
+      sessionStorage.setItem("BookingName", data.fullName);
+      let value = sessionStorage.getItem("BookingName");
+
+      console.log(value);
     } catch (error) {
       setErr(error);
       console.log(err);
-      
     }
-    // alert("selectedDropoffDate : " + typeof selectedDropoffDate);
   };
 
   return (
@@ -56,87 +53,128 @@ const BookNowPageCom = () => {
                 Estimated Fare ₹ 11.00 per/km
               </p>
             </div>
-                  {/* Form */}
-
-
+            {/* Form */}
 
             <form
               className="flex flex-wrap flex-col gap-4"
               onSubmit={handleSubmit(FromData)}
             >
-              <div className="flex justify-between gap-4">
+              <div className="  flex  justify-between gap-4 mb-3">
                 <input
                   type="text"
                   placeholder="Full Name"
-                  className="p-3 border-2 border-gray-300 rounded-lg w-1/2"
-                  {...register("fullName",{
-                    required:true
+                  className="p-3 border-2 border-gray-300 rounded-lg w-1/2 "
+                  {...register("fullName", {
+                    required: true,
                   })}
-
                 />
-               {errors.fullName && <p className="absolute font-semibold text-lg  text-orange-600 ml-3 mt-[2.7rem] p-1 "> *Name is required.</p>}
+                {errors.fullName && (
+                  <p className="  absolute text-orange-600 ml-3 mt-[2.8rem]  p-1 ">
+                    *Name is required.
+                  </p>
+                )}
                 <input
                   type="text"
                   placeholder="10 Digit Mobile No"
                   className="p-3 border-2 border-gray-300 rounded-lg w-1/2"
-                  {...register("MobileNum",{
-                    required:true,
+                  {...register("MobileNum", {
+                    required: true,
+                    pattern: {
+                      value: /^[0-9]{10}$/, // Optional: for validating a 10-digit number
+                      message: "*Invalid Mobile Number",
+                    },
                   })}
                 />
+                {errors.MobileNum && (
+                  <p className="absolute  left-[27rem] flex mt-[2.8rem]  p-1  text-orange-600">
+                    {errors.MobileNum.message || "*Mobile Number is required."}
+                  </p>
+                )}
               </div>
               <input
                 type="text"
                 placeholder="Enter your Destination"
-                className="p-3 border-2 border-gray-300 rounded-lg"
-                {...register("destinationLocation",{
-                  required:true,
+                className="  p-3 border-2 border-gray-300 rounded-lg"
+                {...register("destinationLocation", {
+                  required: true,
                 })}
               />
+              {errors.destinationLocation && (
+                <p className="   text-orange-700 ml-3 p-0 my-0 ">
+                  * Drop off Location is required.
+                </p>
+              )}
               <input
                 type="text"
                 placeholder="Pick up Address"
                 className="p-3 border-2 border-gray-300 rounded-lg"
-                {
-                  ...register("PicUpLocation",{
-                    required:true,
-                  })
-                }
+                {...register("PicUpLocation", {
+                  required: true,
+                })}
               />
+              {errors.PicUpLocation && (
+                <p className="   text-orange-700 ml-3 p-0 my-0 ">
+                  * Pick Up Location is required.
+                </p>
+              )}
 
-              <div className="flex lg:flex-nowrap flex-wrap  justify-between gap-4">
+              <div className=" flex lg:flex-nowrap flex-wrap  justify-between gap-4">
                 <div className=" flex flex-wrap flex-col w-full">
                   <label className="px-3 text-start">Pickup Date</label>
                   <DatePicker
                     selected={selectedPicupDate}
-                    onChange={(date) =>
-                       {
-                        setSelectedpicupDate(date);
-                        setValue("PickDateTime", date);
-                      }
-                      }
+                    onChange={(date) => {
+                      setSelectedpicupDate(date);
+                      setValue("PickDateTime", date);
+                    }}
                     showTimeSelect
                     timeFormat="hh:mm aa"
                     timeIntervals={15}
                     dateFormat="MMMM d, yyyy h:mm aa"
                     className="p-3 border-2 border-gray-300 rounded-lg "
                     placeholderText="Select Pickup Date and Time"
+
                     // {
                     //   ...register("PickDatetime",{  //this is not support of this object
                     //     required:true,
                     //   })
                     // }
                   />
-                
+                  {/* Manually setting the required validation */}
+
+                  {/* Why the hidden input? Since DatePicker is not a native HTML
+                  input element, react-hook-form can't directly track it via the
+                  register function. The hidden input field allows
+                  react-hook-form to track the form state, and we use setValue
+                  to manually update it. */}
+                  <input
+                    type="hidden"
+                    {...register("PickDateTime", {
+                      required: " *Pickup date is required",
+                    })}
+                  />
+                  {errors.PickDateTime && (
+                    <p className="text-red-600 mt-1">
+                      {errors.PickDateTime.message}
+                    </p>
+                  )}
                 </div>
                 <div className=" flex flex-wrap flex-col w-full">
                   <label className="px-3 text-start">DropOff Date</label>
 
                   <DatePicker
                     selected={selectedDropoffDate}
-                    onChange={(date) =>{ 
+                    onChange={(date) => {
                       setSelectedDropoffDate(date);
-                      setValue("dropOffDateTime",date)
-                      
+                      setValue("dropOffDateTime", date);
+
+                      if (!date) {
+                        setError("dropOffDateTime", {
+                          message: " *drop off date and time is required",
+                        });
+                      } else {
+                        clearErrors("dropOffDateTime");
+                      }
                     }}
                     showTimeSelect
                     timeFormat="hh:mm aa"
@@ -144,52 +182,66 @@ const BookNowPageCom = () => {
                     dateFormat="MMMM d, yyyy h:mm aa"
                     className="p-3 border-2 border-gray-300 rounded-lg"
                     placeholderText="Select Drop Date "
-                    // {
-                    //   ...register("dropoffDatetime",{
-                    //     required:true,
-                    //   })
-                    // }
                   />
+                  {/* Manually setting the required validation */}
+                  <input
+                    type="hidden"
+                    {...register("dropOffDateTime", {
+                      required: "*drop off date is required",
+                    })}
+                  />
+                  {errors.dropOffDateTime && (
+                    <p className="text-red-600 mt-1">
+                      {errors.dropOffDateTime.message}
+                    </p>
+                  )}
                 </div>
               </div>
-
 
               <div className="flex flex-wrap flex-col">
                 <label className="text-start">Trip Type</label>
 
                 <select
+                  {...register("tripType", {
+                    required: " Please selact a your trip Type ", // Custom required message
+                  })}
                   onChange={(e) => {
-                    const tripDate=e.target.value;
+                    const tripDate = e.target.value;
                     setAirportOpt(tripDate);
-                    setValue("tripype",tripDate)
-                  }
-                   }
-                  className="p-3 border-2 border-gray-300 rounded-lg"
-                // {
-                //   ...register("tripype",{
-                //     required:true             //rgister and ongange event can't use in same time
-                //   }
-                //   )
-                // }
+                    setValue("tripType", tripDate);
+                  }}
+                  className="p-3 border-2 border-gray-300 rounded-lg "
                 >
-                  <option>Please select a Trip</option>
+                    <option value="">Please select a Trip</option> 
                   <option value="oneWay">ONE WAY</option>
                   <option value="roundTrip">ROUND TRIP</option>
                   <option value="airPort">AIRPORT</option>
                 </select>
-
+                {/* Error Message */}
+                {errors.tripType && (
+                  <p className="text-orange-700 ml-3 p-0 my-0">
+                    * {errors.tripType.message} {/* Dynamic error message */}
+                  </p>
+                )}
                 {airportOpt === "airPort" && (
-                  <select className=" flex items-center mt-5 justify-center p-3 border-2 max-w-[50%] border-gray-300 rounded-lg"
-                  {
-                    ...register("airPortOptation",{
-                      required:true,
-                    })
-                  }
+                  <>
+                  <select
+                    className=" flex items-center mt-5 justify-center p-3 border-2 max-w-[50%] border-gray-300 rounded-lg"
+                    {...register("airPortOptation", {
+                      required: "please select a optaion",
+                    })}
                   >
-                    <option>Please select type</option>
+                    <option value="">Please select type</option>
                     <option value="DropToAirport">Drop to Airport</option>
                     <option value="PickFromAirport">Pickup from Airport</option>
-                  </select>
+                  </select> 
+
+                  {errors.airPortOptation && (
+                    <p className="text-orange-700 ml-3 p-0 my-0">
+                        * {errors.airPortOptation.message} 
+                    </p>
+                  ) }
+                  </>
                 )}
               </div>
 
@@ -217,7 +269,7 @@ const BookNow = () => {
   return (
     <>
       <div className="border-2  shadow-sm rounded-md mt-[6rem] min-w-full min-h-screen flex flex-col items-center p-3 my-5">
-        <BookNowPageCom/>
+        <BookNowPageCom />
       </div>
     </>
   );
