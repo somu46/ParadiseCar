@@ -33,8 +33,8 @@ const BookNowPageCom = () => {
     try {
       console.log(data);
 
-      sessionStorage.setItem("BookingName", data.fullName);
-      let value = sessionStorage.getItem("BookingName");
+      // sessionStorage.setItem("BookingName", data.fullName);
+      // let value = sessionStorage.getItem("BookingName");
 
       console.log(value);
       formRef.current.reset();
@@ -132,6 +132,15 @@ const BookNowPageCom = () => {
                     onChange={(date) => {
                       setSelectedpicupDate(date);
                       setValue("PickDateTime", date);
+                      
+                      if(!date){
+                        setError("PickDateTime",{
+                          message:"* pick up date and time is required"
+                        })
+                      }else{
+                        clearErrors("PickDateTime")
+                      }
+                      
                     }}
                     showTimeSelect
                     timeFormat="hh:mm aa"
@@ -209,12 +218,21 @@ const BookNowPageCom = () => {
 
                 <select
                   {...register("tripType", {
-                    required: " Please selact a your trip Type ", // Custom required message
+                    required: " Please selact your trip Type ", // Custom required message
                   })}
                   onChange={(e) => {
-                    const tripDate = e.target.value;
-                    setAirportOpt(tripDate);
-                    setValue("tripType", tripDate);
+                    const tripData = e.target.value;
+                    setAirportOpt(tripData);
+                    setValue("tripType", tripData);
+                    
+                      if(!tripData){
+                        setError("tripType",{
+                              message:" Please selact  your trip Type"
+                        })
+                      }else{
+                        clearErrors("tripType");
+                      }
+
                   }}
                   className="p-3 border-2 border-gray-300 rounded-lg "
                 >
