@@ -8,9 +8,11 @@ import ErrorBoundary from "./Error/ErrorBondary/ErrorBoundray.js"
 
 function About() {
     return (
+
       <ErrorBoundary>
         <AboutUs />
       </ErrorBoundary>
+      
     );
   }
   

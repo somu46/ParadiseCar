@@ -2,6 +2,7 @@ import { FaTaxi } from 'react-icons/fa';
 
 
 const BookNowButton = ({ onClick, label = "Book Now" }) => {
+  
     return (
       <button
         onClick={onClick}
