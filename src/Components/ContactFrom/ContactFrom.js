@@ -4,59 +4,100 @@ import BookNowButton from "../Button/Button";
 import { useForm } from "react-hook-form";
 
 const ContactForm = () => {
-  const { register, setValue, setError, clearErrors, handleSubmit, formState: { errors }, } = useForm();
-  const [err,setErr]=useState("");
-  const fromref=useRef();
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+  const [err, setErr] = useState("");
+  const fromref = useRef();
 
-  const handlefromData=(value)=>{
-     setErr("");
-     try{
-         
-     }catch(error){
+  const handlefromData = (value) => {
+    setErr("");
+    try {
+      console.log(`contact from date :`);
+      console.log(value);
+      if (value) {
+        fromref.current.reset();
+      }
+    } catch (error) {
       setErr(error);
       console.log(err);
-      
-     }
-  }
+    }
+  };
 
   return (
     <div className=" contact-form-container m-0 lg:m-1 w-full lg:w-1/2 p-0 lg:p-3">
       <form
-       className="  contact-form mx-0 px-0 lg:mx-3 py-5 lg:px-5"
-       ref={fromref}
-       >
+        className="  contact-form mx-0 px-0 lg:mx-3 py-5 lg:px-5"
+        onSubmit={handleSubmit(handlefromData)}
+        ref={fromref}
+      >
         <label className="text-center dark:text-sky-900 text-inherit">
           DO YOU HAVE ANY QUESTIONS?
         </label>
         <input
-         type="text" 
-         placeholder="Enter Your Name"
-         {
-          ...register("fullname",{
-            required:" * Please Enter your name"
-          })
-         }
-          />
+          type="text"
+          placeholder="Enter Your Name"
+          {...register("fullName", {
+            required: " * Please Enter your name",
+          })}
+        />
+        {errors.fullName && (
+          <p className="   text-orange-800  p-1 text-base font-mono ">
+            * Please Enter your Name.
+          </p>
+        )}
+
         <input
-         type="text" 
-         placeholder="Enter Your Mobile Number"
-         {
-          ...register("mobileNum",{
-            required:"* Mobile number required",
+          type="text"
+          placeholder="Enter Your Mobile Number"
+          {...register("mobileNum", {
+            required:true,
             pattern: {
               value: /^[6-9]\d{9}$/, // Regex pattern for 10-digit mobile numbers starting with 6-9
               message: "Please enter a valid 10-digit mobile number",
-            }
-          })
-         }
-         />
-        <input 
-        type="email"
-         placeholder="Enter Your Email Address" 
-         
+            },
+          })}
         />
-        <textarea placeholder="Message"></textarea>
-
+        {errors.mobileNum && (
+          <p className="   text-orange-800  p-1 text-base font-mono ">
+            {errors.mobileNum.message ||" Mobile number required"}.
+          </p>
+        )}
+        <input
+          type="email"
+          placeholder="Enter Your Email Address"
+          {...register("email", {
+            required: true,
+            validate: {
+              matchPatern: (value) =>
+                /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(value) ||
+                "Email address must be a valid address",
+            },
+          })}
+        />
+        {
+          errors.email && (
+            <p className="   text-orange-800  p-1 text-base font-mono ">
+            * Email address is required.
+          </p>
+          )
+        }
+        <textarea
+          placeholder="Message"
+          {...register("contactMessage", {
+            required: true,
+          })}
+        >
+        </textarea>
+          {
+            errors.contactMessage && (
+              <p className="   text-orange-700  p-1 text-base font-mono ">
+            * We recommend you Please write something.
+          </p>
+            )
+          }   
         <div className="flex justify-center font-semibold text-base mt-4">
           <BookNowButton label="Submit" />
         </div>

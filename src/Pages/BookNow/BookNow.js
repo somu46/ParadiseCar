@@ -36,7 +36,7 @@ const BookNowPageCom = () => {
       // sessionStorage.setItem("BookingName", data.fullName);
       // let value = sessionStorage.getItem("BookingName");
 
-      console.log(value);
+      // console.log(value);
       formRef.current.reset();
     } catch (error) {
       setErr(error);
