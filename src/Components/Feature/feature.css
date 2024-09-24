@@ -17,21 +17,31 @@
     flex-wrap: wrap;
     gap: 60px; /* Adds spacing between boxes */
   }
-  
-  .feature-box {
+    .feature-box {
+      align-items: center;
+      background-color: inherit;
+      border: 1.6px solid #19f800;
+      border-radius: 10px;
+      box-sizing: border-box;
+      color: #19f800;
+      display: flex;
+      font-family: 'Poppins', sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      height: 135px;
+      justify-content: flex-start;
+      line-height: 24px;
+      max-height: 140px;
+      min-height: 135px;
+      padding: 24px 12.8px;
+      transition: all 0.5s ease-in;
+      width: 312px;
+      -webkit-tap-highlight-color: transparent;
+      text-size-adjust: 100%;
+      unicode-bidi: isolate;
+    }
     
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 200px;
-    height: 150px;
-    background-color: #F7F7FB;
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    transition: transform 0.3s;
-  }
+  
   
   .feature-box:hover {
     transform: scale(1.05);
@@ -41,8 +51,9 @@
     height: 60px;
     width: 60px;
     font-size: 40px;
-    color: #3d3d43;
+    color:yellow;
     margin-bottom: 10px;
+    margin-right: 5px;
   }
   
   .feature-box p {
