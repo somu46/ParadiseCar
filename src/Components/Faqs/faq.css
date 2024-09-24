@@ -1,0 +1,111 @@
+/* General FAQ container */
+.faqs {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+    background-color: #f9f9f9; /* light grey background */
+    font-family: 'Poppins', sans-serif;
+    color: #333; /* dark grey for text */
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  .faq-left {
+    width: 30%; /* Left section occupies 30% */
+    text-align: left;
+  }
+  
+  .faq-left h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    color: #41479b; /* Custom color for header */
+  }
+  
+  .faq-left h3 {
+    font-size: 18px;
+    color: #666; /* Lighter grey for subheading */
+    margin-bottom: 20px;
+  }
+  
+  .faq-left button {
+    background-color: #41479b; /* Button background color */
+    color: #fff; /* White text */
+    border: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .faq-left button:hover {
+    background-color: #2c357e; /* Darker shade on hover */
+  }
+  
+  /* FAQ Right Section */
+  .faq-right {
+    width: 50%; /* Right section occupies 50% */
+  }
+  
+  /* FAQ Item styling */
+  .faq-item {
+    background-color: #fff; /* White background for each item */
+    margin-bottom: 15px;
+    padding: 15px 20px;
+    border: 1px solid rgba(65, 71, 155, 0.2); /* Light border */
+    border-radius: 8px;
+    transition: box-shadow 0.3s ease-in-out;
+    cursor: pointer; /* Entire FAQ item is clickable */
+    position: relative; /* To ensure positioning for icon */
+    display: block; /* Ensure block layout for expansion */
+    overflow: hidden; /* Avoid content overflow */
+  }
+  
+  .faq-item:hover {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Add slight shadow on hover */
+  }
+  
+  /* FAQ question and expand icon */
+  .faq-item p {
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    margin: 0;
+    display: inline-block; /* Ensure inline behavior for text */
+    vertical-align: middle; /* Align text vertically */
+    margin-left: -12rem;
+  }
+  
+  .faq-item svg {
+    font-size: 28px;
+    color: #41479b;
+    position: absolute;
+    right: 20px; /* Fix icon to the right */
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  /* Content to show/hide */
+  .expand-content {
+    margin-top: 10px;
+    color: #666;
+    font-size: 14px;
+    line-height: 1.6;
+    display: none; /* Hidden initially */
+    width: 100%;
+    transition: max-height 0.3s ease; /* Smooth expand/collapse */
+    max-height: 0; /* Initially collapsed */
+    overflow: hidden; /* Prevent overflow during collapse */
+  }
+  
+  .expand-content.active {
+    display: block;
+    max-height: 500px; /* Dynamically expand content height */
+    transition: max-height 0.3s ease; /* Smooth transition */
+  }
+  
+  /* Expanded FAQ item */
+  .faq-item.expanded {
+    flex-wrap: wrap;
+  }
+  
