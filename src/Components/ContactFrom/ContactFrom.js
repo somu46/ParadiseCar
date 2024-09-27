@@ -62,7 +62,7 @@ const ContactForm = () => {
         />
         {errors.mobileNum && (
           <p className="   text-orange-800  p-1 text-base font-mono ">
-            {errors.mobileNum.message ||" Mobile number required"}.
+           * {errors.mobileNum.message ||" Mobile number required"}.
           </p>
         )}
         <input
@@ -73,7 +73,7 @@ const ContactForm = () => {
             validate: {
               matchPatern: (value) =>
                 /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(value) ||
-                "Email address must be a valid address",
+                "* Email address must be a valid address",
             },
           })}
         />
