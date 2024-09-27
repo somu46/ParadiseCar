@@ -1,9 +1,14 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./Contactform.css";
 import BookNowButton from "../Button/Button";
 import { useForm } from "react-hook-form";
+import { ContactServicesTest } from "../../Services/ApiServices";
+
+
+
 
 const ContactForm = () => {
+  const [responce, setresponse] = useState(null);
   const {
     register,
     handleSubmit,
@@ -11,6 +16,16 @@ const ContactForm = () => {
   } = useForm();
   const [err, setErr] = useState("");
   const fromref = useRef();
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const resData = await ContactServicesTest();
+      setresponse(resData);
+    };
+    fetchData();
+  }, []);
+
+  console.log(responce);
 
   const handlefromData = (value) => {
     setErr("");
@@ -53,7 +68,7 @@ const ContactForm = () => {
           type="text"
           placeholder="Enter Your Mobile Number"
           {...register("mobileNum", {
-            required:true,
+            required: true,
             pattern: {
               value: /^[6-9]\d{9}$/, // Regex pattern for 10-digit mobile numbers starting with 6-9
               message: "Please enter a valid 10-digit mobile number",
@@ -62,7 +77,7 @@ const ContactForm = () => {
         />
         {errors.mobileNum && (
           <p className="   text-orange-800  p-1 text-base font-mono ">
-           * {errors.mobileNum.message ||" Mobile number required"}.
+            * {errors.mobileNum.message || " Mobile number required"}.
           </p>
         )}
         <input
@@ -77,27 +92,22 @@ const ContactForm = () => {
             },
           })}
         />
-        {
-          errors.email && (
-            <p className="   text-orange-800  p-1 text-base font-mono ">
+        {errors.email && (
+          <p className="   text-orange-800  p-1 text-base font-mono ">
             * Email address is required.
           </p>
-          )
-        }
+        )}
         <textarea
           placeholder="Message"
           {...register("contactMessage", {
             required: true,
           })}
-        >
-        </textarea>
-          {
-            errors.contactMessage && (
-              <p className="   text-orange-700  p-1 text-base font-mono ">
+        ></textarea>
+        {errors.contactMessage && (
+          <p className="   text-orange-700  p-1 text-base font-mono ">
             * We recommend you Please write something.
           </p>
-            )
-          }   
+        )}
         <div className="flex justify-center font-semibold text-base mt-4">
           <BookNowButton label="Submit" />
         </div>
