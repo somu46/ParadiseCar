@@ -8,13 +8,13 @@ const Office = () => {
         width="630" 
         height="380" 
         // style="border:0" 
-        allowfullscreen="" 
+        allowFullScreen 
         loading="lazy" 
-        referrerpolicy="no-referrer-when-downgrade"
+        referrerPolicy="no-referrer" 
         className='border-2 border-gray-400 rounded-lg shadow-md transition-all duration-300 ease-in-out  hover:scale-95'>
         </iframe>
     </div>
   )
 }
 
-export default Office
+export default Office;
