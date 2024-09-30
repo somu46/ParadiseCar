@@ -8,7 +8,9 @@ import {Contactservices } from "../../Services/ApiServices";
 
 
 const ContactForm = () => {
-  const [responce, setresponse] = useState(null);
+
+  const [responce, setresponse] = useState();
+
   const {
     register,
     handleSubmit,
@@ -21,27 +23,35 @@ const ContactForm = () => {
 
 
   const handlefromData = (value) => {
-    setErr("");
+   
     try {
-      
-      // console.log(value);
+      setErr("");
       if (value) {
         setresponse(value);
         fromref.current.reset();
       }
     } catch (error) {
-      setErr(error);
+      setErr(error.message || "An unexpected error occurred.");
       console.log(err);
     }
   };
 
   useEffect(() => {
+   
     const postData = async () => {
+      if(responce){
       const apiresponse=await Contactservices(responce);
       console.log("Data send successfully : ",apiresponse.data);
+    }else{
+       console.log("Responce data is empty .");
+       
+    }
       
     };
-    postData();
+    if(responce)   postData();
+   
+
+    
   }, [responce]);
 
   return (
