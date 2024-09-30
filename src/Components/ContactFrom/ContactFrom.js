@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import "./Contactform.css";
 import BookNowButton from "../Button/Button";
 import { useForm } from "react-hook-form";
-import { ContactServicesTest } from "../../Services/ApiServices";
+import {Contactservices } from "../../Services/ApiServices";
 
 
 
@@ -17,22 +17,16 @@ const ContactForm = () => {
   const [err, setErr] = useState("");
   const fromref = useRef();
 
-  useEffect(() => {
-    const fetchData = async () => {
-      const resData = await ContactServicesTest();
-      setresponse(resData);
-    };
-    fetchData();
-  }, []);
+  
 
-  console.log(responce);
 
   const handlefromData = (value) => {
     setErr("");
     try {
-      console.log(`contact from date :`);
-      console.log(value);
+      
+      // console.log(value);
       if (value) {
+        setresponse(value);
         fromref.current.reset();
       }
     } catch (error) {
@@ -40,6 +34,15 @@ const ContactForm = () => {
       console.log(err);
     }
   };
+
+  useEffect(() => {
+    const postData = async () => {
+      const apiresponse=await Contactservices(responce);
+      console.log("Data send successfully : ",apiresponse.data);
+      
+    };
+    postData();
+  }, [responce]);
 
   return (
     <div className=" contact-form-container m-0 lg:m-1 w-full lg:w-1/2 p-0 lg:p-3">
