@@ -6,14 +6,14 @@ import Dark_Logo from '../../Assets/Dark_ParadiseCar.png';
 import { NavLink } from 'react-router-dom';
 import Hamburger from 'hamburger-react'; // Ensure you have this package installed
 
-const Navbar = () => {
-  const [isDarkMode, setIsDarkMode] = useState(false);
+const Navbar = ({ isDarkMode, handleThemeToggle })=> {
+  // const [isDarkMode, setIsDarkMode] = useState(false);
   const [isOpen, setOpen] = useState(false); // State for hamburger menu
 
-  const handleThemeToggle = () => {
-    setIsDarkMode(!isDarkMode);
-    document.body.classList.toggle('dark-mode', !isDarkMode); // Toggle dark mode for body
-  };
+  // const handleThemeToggle = () => {
+  //   setIsDarkMode(!isDarkMode);
+  //   document.body.classList.toggle('dark-mode', !isDarkMode); // Toggle dark mode for body
+  // };
 
   return (
     <nav className={`navbar ${isDarkMode ? 'dark' : 'light'}`}>

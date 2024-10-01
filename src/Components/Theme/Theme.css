@@ -1,31 +1,49 @@
 /* Basic button styling */
 .theme-toggle-button {
-    padding: 10px 20px;
-    font-size: 24px;
-    cursor: pointer;
-    background-color: #fff;
-    color: #333;
-    border: none;
-    border-radius: 5px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    transition: background-color 0.3s ease, color 0.3s ease;
-  }
-  
-  /* Dark mode styles for the button */
-  body.dark-mode .theme-toggle-button {
-    background-color: #333;
-    color: #fff;
-  }
-  
-  /* Global styles for dark mode */
-  body.dark-mode {
-    background-color: #333;
-    color: #fff;
-  }
-  
-  body {
-    transition: background-color 0.3s ease, color 0.3s ease;
-  }
-  
+  padding: 10px 20px;
+  font-size: 24px;
+  cursor: pointer;
+  background-color: #fff;
+  color: #333;
+  border: none;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Dark mode styles for the button */
+body.dark-mode .theme-toggle-button {
+  background-color: #333;
+  color: #fff;
+}
+
+/* Global styles for dark mode */
+body.dark-mode {
+  background-color: #333;
+  color: #fff;
+}
+
+/* Ensure that all headings, paragraphs, and anchor tags adopt dark mode colors */
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6,
+body.dark-mode p,
+body.dark-mode a {
+  color: #fff; /* Set a white color for text in dark mode */
+}
+
+/* Additional styling for links to change hover color in dark mode */
+body.dark-mode a:hover {
+  color: #ffdd57; /* Yellowish hover effect in dark mode */
+}
+
+/* Body base styling */
+body {
+  transition: background-color 0.3s ease, color 0.3s ease;
+  color: #333; /* Default light mode text color */
+}
