@@ -22,7 +22,7 @@ const AboutUs = () => {
     <div className="about-section flex flex-wrap flex-col ">
       <div className="about-wrapper">
         <div className="about-image">
-          <img alt="CEO" className="profile-image" />
+          <img alt="CEO" className="profile-image " />
           <h3>SUDIPTA KARMAKAR</h3>
         </div>
 
