@@ -61,9 +61,9 @@ const ContactForm = () => {
         onSubmit={handleSubmit(handlefromData)}
         ref={fromref}
       >
-        <label className="text-center dark:text-sky-900 text-inherit">
+        <h1 className="text-center dark:text-sky-900 text-inherit">
           DO YOU HAVE ANY QUESTIONS?
-        </label>
+        </h1>
         <input
           type="text"
           placeholder="Enter Your Name"
