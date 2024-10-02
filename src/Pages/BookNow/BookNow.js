@@ -46,17 +46,17 @@ const BookNowPageCom = () => {
 
   return (
     <>
-      <div className="mt-[0.25rem] w-full lg:w-[80%] mb-[15rem] lg:mb-3 lg:h-auto flex justify-center items-center ">
-        <div className="flex flex-wrap flex-col lg:flex-row justify-between bg-sky-100 border-2 shadow-lg rounded-md w-[100%] h-full lg:min-h-[70%] p-1 lg:overflow-hidden">
+      <div className="mt-[0.25rem] w-full lg:w-[80%] mb-[15rem] lg:mb-3 lg:h-auto flex justify-center items-center text-black ">
+        <div className="flex flex-wrap flex-col lg:flex-row justify-between bg-sky-100   border-2 shadow-lg rounded-md w-[100%] h-full lg:min-h-[70%] p-1 lg:overflow-hidden">
           {/* Left Section (Form & Text) */}
           <div className="w-full md:w-1/2 flex flex-col justify-start p-5">
             <div className="mb-6">
-              <p className="text-3xl font-bold text-start text-orange-600 mb-2">
+              <h6 className="text-3xl font-bold text-start text-orange-600 mb-2">
                 Booking for Outstation Trip
-              </p>
-              <p className="text-lg font-semibold text-start text-slate-900">
+              </h6>
+              <h6 className="text-lg font-semibold text-start text-slate-900">
                 Estimated Fare ₹ 11.00 per/km
-              </p>
+              </h6>
             </div>
             {/* Form */}
 
@@ -75,9 +75,9 @@ const BookNowPageCom = () => {
                   })}
                 />
                 {errors.fullName && (
-                  <p className="  absolute text-orange-600 ml-3 mt-[2.8rem]  p-1 ">
+                  <h6 className="  absolute text-orange-600 ml-3 mt-[2.8rem]  p-1 ">
                     *Name is required.
-                  </p>
+                  </h6>
                 )}
                 <input
                   type="text"
@@ -92,9 +92,9 @@ const BookNowPageCom = () => {
                   })}
                 />
                 {errors.MobileNum && (
-                  <p className="absolute left-[5rem]  lg:left-[27rem] flex lg:mt-[2.8rem] bottom-10 lg:bottom-auto  p-1  text-orange-600">
+                  <h6 className="absolute left-[5rem]  lg:left-[27rem] flex lg:mt-[2.8rem] bottom-10 lg:bottom-auto  p-1  text-orange-600">
                     {errors.MobileNum.message || "* Mobile Number is required."}
-                  </p>
+                  </h6>
                 )}
               </div>
               <input
@@ -106,9 +106,9 @@ const BookNowPageCom = () => {
                 })}
               />
               {errors.destinationLocation && (
-                <p className="   text-orange-700 ml-3 p-0 my-0 ">
+                <h6 className="   text-orange-700 ml-3 p-0 my-0 ">
                   * Drop off Location is required.
-                </p>
+                </h6>
               )}
               <input
                 type="text"
@@ -119,9 +119,9 @@ const BookNowPageCom = () => {
                 })}
               />
               {errors.PicUpLocation && (
-                <p className="   text-orange-700 ml-3 p-0 my-0 ">
+                <h6 className="   text-orange-700 ml-3 p-0 my-0 ">
                   * Pick Up Location is required.
-                </p>
+                </h6>
               )}
 
               <div className=" flex lg:flex-nowrap flex-wrap  justify-between gap-4">
@@ -169,9 +169,9 @@ const BookNowPageCom = () => {
                     })}
                   />
                   {errors.PickDateTime && (
-                    <p className="text-red-600 mt-1">
+                    <h6 className="text-red-600 mt-1">
                       {errors.PickDateTime.message}
-                    </p>
+                    </h6>
                   )}
                 </div>
                 <div className=" flex flex-wrap flex-col w-full">
@@ -206,9 +206,9 @@ const BookNowPageCom = () => {
                     })}
                   />
                   {errors.dropOffDateTime && (
-                    <p className="text-red-600 mt-1">
+                    <h6 className="text-red-600 mt-1">
                       {errors.dropOffDateTime.message}
-                    </p>
+                    </h6>
                   )}
                 </div>
               </div>
@@ -236,16 +236,16 @@ const BookNowPageCom = () => {
                   }}
                   className="p-3 border-2 border-gray-300 rounded-lg "
                 >
-                    <option value="">Please select a Trip</option> 
+                  <option value="" >Please select a Trip</option> 
                   <option value="oneWay">ONE WAY</option>
                   <option value="roundTrip">ROUND TRIP</option>
                   <option value="airPort">AIRPORT</option>
                 </select>
                 {/* Error Message */}
                 {errors.tripType && (
-                  <p className="text-orange-700 ml-3 p-0 my-0">
+                  <h6 className="text-orange-700 ml-3 p-0 my-0">
                     * {errors.tripType.message} {/* Dynamic error message */}
-                  </p>
+                  </h6>
                 )}
                 {airportOpt === "airPort" && (
                   <>
@@ -261,9 +261,9 @@ const BookNowPageCom = () => {
                   </select> 
 
                   {errors.airPortOptation && (
-                    <p className="text-orange-700 ml-3 p-0 my-0">
+                    <h6 className="text-orange-700 ml-3 p-0 my-0">
                         * {errors.airPortOptation.message} 
-                    </p>
+                    </h6>
                   ) }
                   </>
                 )}
@@ -292,7 +292,7 @@ const BookNowPageCom = () => {
 const BookNow = () => {
   return (
     <>
-      <div className="border-2  shadow-sm rounded-md mt-[6rem] min-w-full min-h-screen flex flex-col items-center p-3 my-5">
+      <div className="   mt-[6rem] min-w-full min-h-screen flex flex-col items-center p-3 my-5">
         <BookNowPageCom />
       </div>
     </>
