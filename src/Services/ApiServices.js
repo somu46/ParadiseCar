@@ -1,7 +1,7 @@
 import axios from "axios";
 
 
-const BASE_URI="http://localhost:8080/api/vi/userData";
+const BASE_URI="http://localhost:8080/api/v1/userData";
 
 
 const ContactApiTest= async()=>{

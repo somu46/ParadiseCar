@@ -41,7 +41,7 @@ const ContactForm = () => {
     const postData = async () => {
       if(responce){
       const apiresponse=await Contactservices(responce);
-      console.log("Data send successfully : ",apiresponse.data);
+      console.log("Data send successfully : ",apiresponse);
     }else{
        console.log("Responce data is empty .");
        
