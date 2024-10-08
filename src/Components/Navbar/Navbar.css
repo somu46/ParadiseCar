@@ -44,11 +44,14 @@
 
 /* Navbar Links */
 .navbar-links {
+  flex: 1;
   list-style: none;
   display: flex;
   gap: 30px;
   margin: 0;
   padding: 0;
+  justify-content: center;
+ 
 }
 
 .navbar-links li {

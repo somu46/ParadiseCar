@@ -1,0 +1,93 @@
+/* General styling for the container */
+div {
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Container for the entire booking process */
+  .booking-container {
+    max-width: 1000px;
+    margin: 0 auto; /* Center the container */
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Header styling */
+  .booking-container h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+  }
+  
+  /* Horizontal layout for the process steps */
+  .process-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap; /* Allows wrapping if screen is too narrow */
+  }
+  
+  /* Individual Process Step */
+  .process {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 20px;
+    width: 22%; /* Adjust width to fit 4 items in a row */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center; /* Center align the content */
+  }
+  
+  .process:hover {
+    transform: translateY(-5px); /* Adds a small lift effect on hover */
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Heading for each process step */
+  .process h3 {
+    font-size: 1.3rem;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+    text-transform: capitalize;
+    letter-spacing: 0.5px;
+    position: relative;
+  }
+  
+  /* Underline the heading with a custom design */
+  .process h3::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 3px;
+    background-color: #f5a623;
+    margin: 0 auto; /* Center the underline */
+    border-radius: 2px;
+    margin-top: 5px;
+  }
+  
+  /* Paragraphs within the process step */
+  .process p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+    margin: 0;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1000px) {
+    .process {
+      width: 45%; /* Reduce width for smaller screens */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .process {
+      width: 100%; /* Stacks steps vertically on smaller screens */
+    }
+  }
+  

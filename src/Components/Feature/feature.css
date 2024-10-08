@@ -20,7 +20,7 @@
     .feature-box {
       align-items: center;
       background-color: inherit;
-      border: 1.6px solid #19f800;
+      border: 1.6px solid #CC5500;
       border-radius: 10px;
       box-sizing: border-box;
       color: #19f800;
@@ -51,7 +51,7 @@
     height: 60px;
     width: 60px;
     font-size: 40px;
-    color:yellow;
+    color:#FFDB58;
     margin-bottom: 10px;
     margin-right: 5px;
   }

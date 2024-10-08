@@ -46,16 +46,16 @@ const BookNowPageCom = () => {
 
   return (
     <>
-      <div className="mt-[0.25rem] w-full lg:w-[80%] mb-[15rem] lg:mb-3 lg:h-auto flex justify-center items-center text-black ">
-        <div className="flex flex-wrap flex-col lg:flex-row justify-between bg-sky-100   border-2 shadow-lg rounded-md w-[100%] h-full lg:min-h-[70%] p-1 lg:overflow-hidden">
+      <div className="mt-[0.25rem] w-full lg:w-[100%] mb-[15rem] lg:mb-3 lg:h-auto flex justify-center items-center text-black ">
+        <div className="flex flex-wrap flex-col lg:flex-row justify-between inherit   border-2 shadow-lg rounded-md w-[100%] h-full lg:min-h-[70%] p-1 lg:overflow-hidden">
           {/* Left Section (Form & Text) */}
           <div className="w-full md:w-1/2 flex flex-col justify-start p-5">
             <div className="mb-6">
               <h6 className="text-3xl font-bold text-start text-orange-600 mb-2">
                 Booking for Outstation Trip
               </h6>
-              <h6 className="text-lg font-semibold text-start text-slate-900">
-                Estimated Fare ₹ 11.00 per/km
+              <h6 className="text-lg font-semibold text-start text-red-600">
+                Estimated Fare ₹ 16.00 per/km
               </h6>
             </div>
             {/* Form */}
@@ -69,7 +69,7 @@ const BookNowPageCom = () => {
                 <input
                   type="text"
                   placeholder="Full Name"
-                  className="p-3 border-2 border-gray-300 rounded-lg w-full lg:w-1/2 mb-3 lg:mb-0 "
+                  className="p-3 border-2 border-gray-300 rounded-lg bg-inherit w-full lg:w-1/2 mb-3 lg:mb-0 "
                   {...register("fullName", {
                     required: true,
                   })}
@@ -82,7 +82,7 @@ const BookNowPageCom = () => {
                 <input
                   type="text"
                   placeholder="10 Digit Mobile No"
-                  className="p-3 border-2 border-gray-300 rounded-lg w-full lg:w-1/2 mb-3 lg:mb-0"
+                  className="p-3 border-2 border-gray-300 rounded-lg bg-inherit w-full lg:w-1/2 mb-3 lg:mb-0"
                   {...register("MobileNum", {
                     required: true,
                     pattern: {
@@ -100,7 +100,7 @@ const BookNowPageCom = () => {
               <input
                 type="text"
                 placeholder="Enter your Destination"
-                className="  p-3 border-2 border-gray-300 rounded-lg"
+                className="  p-3 border-2 border-gray-300 bg-inherit rounded-lg"
                 {...register("destinationLocation", {
                   required: true,
                 })}
@@ -113,7 +113,7 @@ const BookNowPageCom = () => {
               <input
                 type="text"
                 placeholder="Pick up Address"
-                className="p-3 border-2 border-gray-300 rounded-lg"
+                className="p-3 border-2 border-gray-300 rounded-lg bg-inherit"
                 {...register("PicUpLocation", {
                   required: true,
                 })}
@@ -125,8 +125,8 @@ const BookNowPageCom = () => {
               )}
 
               <div className=" flex lg:flex-nowrap flex-wrap  justify-between gap-4">
-                <div className=" flex flex-wrap flex-col w-full">
-                  <label className="px-3 text-start">Pickup Date</label>
+                <div className=" flex flex-wrap flex-col  bg-inherit w-full">
+                  {/* <label className="px-3 text-start ">Pickup Date</label> */}
                   <DatePicker
                     selected={selectedPicupDate}
                     onChange={(date) => {
@@ -146,22 +146,10 @@ const BookNowPageCom = () => {
                     timeFormat="hh:mm aa"
                     timeIntervals={15}
                     dateFormat="MMMM d, yyyy h:mm aa"
-                    className="p-3 border-2 border-gray-300 rounded-lg w-full "
+                    className="p-3 border-2 border-gray-300 bg-inherit rounded-lg w-full "
                     placeholderText="Select Pickup Date and Time"
-
-                    // {
-                    //   ...register("PickDatetime",{  //this is not support of this object
-                    //     required:true,
-                    //   })
-                    // }
                   />
-                  {/* Manually setting the required validation */}
-
-                  {/* Why the hidden input? Since DatePicker is not a native HTML
-                  input element, react-hook-form can't directly track it via the
-                  register function. The hidden input field allows
-                  react-hook-form to track the form state, and we use setValue
-                  to manually update it. */}
+                                   
                   <input
                     type="hidden"
                     {...register("PickDateTime", {
@@ -174,8 +162,8 @@ const BookNowPageCom = () => {
                     </h6>
                   )}
                 </div>
-                <div className=" flex flex-wrap flex-col w-full">
-                  <label className="px-3 text-start">DropOff Date</label>
+                <div className=" flex flex-wrap flex-col  w-full">
+                  {/* <label className="px-3 text-start">DropOff Date</label> */}
 
                   <DatePicker
                     selected={selectedDropoffDate}
@@ -195,7 +183,7 @@ const BookNowPageCom = () => {
                     timeFormat="hh:mm aa"
                     timeIntervals={15}
                     dateFormat="MMMM d, yyyy h:mm aa"
-                    className="p-3 border-2 border-gray-300 rounded-lg w-full"
+                    className="p-3 border-2 border-gray-300 bg-inherit rounded-lg w-full"
                     placeholderText="Select Drop off  Date and Time"
                   />
                   {/* Manually setting the required validation */}
@@ -213,8 +201,8 @@ const BookNowPageCom = () => {
                 </div>
               </div>
 
-              <div className="flex flex-wrap flex-col">
-                <label className="text-start">Trip Type</label>
+              <div className="flex flex-wrap flex-col bg-inherit">
+                {/* <label className="text-start">Trip Type</label> */}
 
                 <select
                   {...register("tripType", {
@@ -234,9 +222,9 @@ const BookNowPageCom = () => {
                       }
 
                   }}
-                  className="p-3 border-2 border-gray-300 rounded-lg "
+                  className="p-3 border-2 bg-inherit border-gray-300 rounded-lg "
                 >
-                  <option value="" >Please select a Trip</option> 
+                  <option value="" >Please select a Trip Type</option> 
                   <option value="oneWay">ONE WAY</option>
                   <option value="roundTrip">ROUND TRIP</option>
                   <option value="airPort">AIRPORT</option>
