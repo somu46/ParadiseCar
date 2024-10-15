@@ -1,5 +1,7 @@
 import React, { useRef, useState } from "react";
 import { useForm } from "react-hook-form";
+
+import "./BookNow.css";
 import BookNowButton from "../../Components/Button/Button";
 import BookNowCarImg from "./../../Assets/Subho bijaya.jpeg";
 import DatePicker from "react-datepicker";
@@ -46,10 +48,10 @@ const BookNowPageCom = () => {
 
   return (
     <>
-      <div className="mt-[0.25rem] w-full lg:w-[100%] mb-[15rem] lg:mb-3 lg:h-auto flex justify-center items-center text-black ">
-        <div className="flex flex-wrap flex-col lg:flex-row justify-between inherit   border-2 shadow-lg rounded-md w-[100%] h-full lg:min-h-[70%] p-1 lg:overflow-hidden">
+      <div className=" mt-[0.25rem] w-full lg:w-[100%] mb-[15rem] lg:mb-3 lg:h-auto flex justify-center items-center text-black ">
+        <div className=" background-image flex flex-wrap flex-col lg:flex-row justify-between inherit   border-2 shadow-lg rounded-md w-[100%] h-full lg:min-h-[70%] p-1 lg:overflow-hidden" >
           {/* Left Section (Form & Text) */}
-          <div className="w-full md:w-1/2 flex flex-col justify-start p-5">
+          <div className="w-full md:w-1/2 flex flex-col justify-start p-5 ">
             <div className="mb-6">
               <h6 className="text-3xl font-bold text-start text-orange-600 mb-2">
                 Booking for Outstation Trip
@@ -61,7 +63,7 @@ const BookNowPageCom = () => {
             {/* Form */}
 
             <form
-              className="flex flex-wrap flex-col gap-4"
+              className="flex flex-wrap flex-col gap-4 "
               onSubmit={handleSubmit(handleBookFromData)}
               ref={formRef} 
             >
