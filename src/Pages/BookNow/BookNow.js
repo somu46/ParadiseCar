@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 import BookNowButton from "../../Components/Button/Button";
-import BookNowCarImg from "./../../Assets/BookNowCarImg.svg";
+import BookNowCarImg from "./../../Assets/Subho bijaya.jpeg";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 

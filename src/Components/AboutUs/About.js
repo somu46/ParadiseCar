@@ -1,5 +1,6 @@
 import React from 'react';
 import './About.css'; // Import the CSS file
+import Paradise from '../../Assets/Dark_ParadiseCar.png'
 const HeroSection = () => {
   return (
     <div className="hero-container">
@@ -16,10 +17,7 @@ const HeroSection = () => {
         <button className="rent-button">Rent Now</button>
       </div>
       <div className="hero-image">
-        <img src="your-image-url-here" alt="Car rental" />
-        <div className="play-button">
-          <i className="fa fa-play-circle"></i>
-        </div>
+        <img src={Paradise} alt="Car rental" />
       </div>
     </div>
   );

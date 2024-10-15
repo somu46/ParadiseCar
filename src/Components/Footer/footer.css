@@ -1,7 +1,5 @@
 .footer{
     font-size: small;
-    /* font-style: italic; */
-    /* width: 100vw; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -10,27 +8,25 @@
     border: 3px solid #dfdede;   
 }
 .element {
-   
-    border-bottom: 1px dashed #F2F2F2;
-     
+  border-bottom: 1px dashed #F2F2F2;  
   }
   
 .seva{
-    color:#324595 ;
+    color:#04fb0c ;
     display: inline;
 }
 .ride{
-    color:#e50614 ;
+    color: #fbc918 ;
     display: inline;
 }
 /*chatgpt*/
 .footer.light {
-    background-color: #ffffff;
+    background-color: inherit;
     color: #333333;
   }
   
   .footer.dark {
-    background-color: #1a1a1a;
+    background-color: inherit;
     color: #e0e0e0;
   }
   

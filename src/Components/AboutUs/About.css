@@ -2,7 +2,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #333;
+    background-color: inherit;
     padding: 40px;
     border-radius: 10px;
     color: white;
@@ -66,17 +66,4 @@
     border-radius: 10px;
   }
   
-  .play-button {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 3rem;
-    color: #ffd700;
-    cursor: pointer;
-  }
-  
-  .play-button:hover {
-    color: #fff700;
-  }
   

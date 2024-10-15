@@ -4,32 +4,32 @@ import './Testimonial.css'; // Importing the CSS file for styles
 const Testimonial = () => {
   const testimonials = [
     {
-      name: 'Jessica',
-      role: 'CEO, XYZ Company',
-      rating: 5,
-      review: 'SwiftStrategix exceeded our expectations in every way. Their attention to detail and strategic approach truly set them apart.',
-      imageUrl: 'url-to-jessica-image', // Replace with actual image URL
-    },
-    {
-      name: 'John Doe',
-      role: 'Business Consultant',
-      rating: 4,
-      review: 'Rentax provided me with an exceptional rental experience. From the moment I made my reservation online to returning the vehicle.',
-      imageUrl: 'url-to-john-image',
-    },
-    {
-      name: 'Sarah Johnson',
+      name: 'Shakti Pada Bhowmick',
       role: 'Customer',
-      rating: 3,
-      review: 'I’ve rented cars from various companies, but Rentax truly stands out. Not only did they offer competitive prices.',
-      imageUrl: 'url-to-sarah-image',
+      rating: 5,
+      review: 'খুব সুন্দর একটা রাইড উপভোগ করলাম আমাদের এই নারায়নপুর থেকে বাগনান অব্দি এর আগেও আমি অন্য গাড়িতে গিয়েছি কিন্তু এত সুন্দর সার্ভিস এত সুন্দর ব্যবহার পাইনি কোথাও আপনাদেরও আমি অনুরোধ করছি এদের মাধ্যমে রাইড নিয়ে আপনারা দেখুন পরখ করে।',
+      imageUrl: 'https://lh3.googleusercontent.com/a/ACg8ocKeAvz7cUF-05jEv1nqP3Hzt_VP_F4m45IK5y9NsgIv5CWQ3w=w45-h45-p-rp-mo-br100' // Replace with actual image URL
     },
     {
-      name: 'Jane Smith',
-      role: 'Founder, 123 Solutions',
+      name: 'Jit Paul',
+      role: 'Customer',
       rating: 5,
-      review: 'I recently rented a car from Rentax for a business trip, and I couldn’t be happier with the service. From the moment I made the reservation.',
-      imageUrl: 'url-to-jane-image',
+      review: 'Rentax provided me with an exceptional rental experience. From the moment I made my reservation online to returning the vehicle.',
+      imageUrl: 'https://lh3.googleusercontent.com/a-/ALV-UjVKahR5VwjxmcxQikvM_eco4Cy0G96WhuvapWMOg9TYLDYRCp1S=w75-h75-p-rp-mo-br100',
+    },
+    {
+      name: 'Rajdeep Sarkar',
+      role: 'Customer',
+      rating: 5,
+      review: 'I’ve rented cars from various companies, but Rentax truly stands out. Not only did they offer competitive prices.',
+      imageUrl: 'https://lh3.googleusercontent.com/a-/ALV-UjXV_lPRDIa8ZbBZyNA1fLFkVxzI_9SclEX8LcmZwZyLV-qgPnwc=w45-h45-p-rp-mo-br100',
+    },
+    {
+      name: 'Soumyajit Ray',
+      role: 'Customer',
+      rating: 5,
+      review: 'Pick up and drop was on time. Happy to see this kind of panctuality. I would also recommend others also to take its services for better experience',
+      imageUrl: 'https://lh3.googleusercontent.com/a/ACg8ocIRULTMzhsYBZm4RD699KwLj5jdv3co5zcUj7R-Vbc2QQVOv0Z9=w45-h45-p-rp-mo-br100',
     },
   ];
 
