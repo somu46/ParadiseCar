@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
 import { RouterProvider,createBrowserRouter } from 'react-router-dom';
+import './index.css';
+
 import Root from './Root/Root';
 import About, { BookNow, ContactUs, Error} from './Pages';
 import App from './App';
@@ -24,7 +25,7 @@ const Route =createBrowserRouter([
       },
       {
         path:"/about",
-        element:   <About/>
+        element:<About/>
          
       },
        {
