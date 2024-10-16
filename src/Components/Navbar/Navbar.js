@@ -1,19 +1,13 @@
 import React, { useState } from 'react';
 import './Navbar.css';
-import ThemeToggleButton from '../Theme/Theme'; // Import the Theme component
+import { NavLink } from 'react-router-dom';
+import Theme from '../../Components/Theme/Theme';
+import Hamburger from 'hamburger-react';
 import Light_Logo from '../../Assets/light_ParadiseCar.png';
 import Dark_Logo from '../../Assets/Dark_ParadiseCar.png';
-import { NavLink } from 'react-router-dom';
-import Hamburger from 'hamburger-react'; // Ensure you have this package installed
 
-const Navbar = ({ isDarkMode, handleThemeToggle })=> {
-  // const [isDarkMode, setIsDarkMode] = useState(false);
-  const [isOpen, setOpen] = useState(false); // State for hamburger menu
-
-  // const handleThemeToggle = () => {
-  //   setIsDarkMode(!isDarkMode);
-  //   document.body.classList.toggle('dark-mode', !isDarkMode); // Toggle dark mode for body
-  // };
+const Navbar = ({ isDarkMode, handleThemeToggle }) => {
+  const [isOpen, setOpen] = useState(false);
 
   return (
     <nav className={`navbar ${isDarkMode ? 'dark' : 'light'}`}>
@@ -60,6 +54,26 @@ const Navbar = ({ isDarkMode, handleThemeToggle })=> {
         </li>
         <li>
           <NavLink
+            to="/cars"
+            className={({ isActive }) =>
+              `${isActive ? "text-yellow-400" : "inherit"}`
+            }
+          >
+            Cars
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+            to="/pricing"
+            className={({ isActive }) =>
+              `${isActive ? "text-yellow-400" : "inherit"}`
+            }
+          >
+            Pricing
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
             to="/contact"
             className={({ isActive }) =>
               `${isActive ? "text-yellow-400" : "inherit"}`
@@ -68,11 +82,22 @@ const Navbar = ({ isDarkMode, handleThemeToggle })=> {
             Contact
           </NavLink>
         </li>
+        <li>
+          <NavLink
+            to="/faq"
+            className={({ isActive }) =>
+              `${isActive ? "text-yellow-400" : "inherit"}`
+            }
+          >
+            FAQ
+          </NavLink>
+        </li>
       </ul>
 
-      {/* Theme Toggle and Hamburger Menu */}
       <div className="menu-controls">
-        <ThemeToggleButton onToggleTheme={handleThemeToggle} isDarkMode={isDarkMode} />
+        <button onClick={handleThemeToggle}>
+          <Theme />
+        </button>
         <div className="hamburger">
           <Hamburger toggled={isOpen} toggle={setOpen} />
         </div>
