@@ -23,74 +23,25 @@ const Navbar = ({ isDarkMode, handleThemeToggle }) => {
 
       <ul className={`navbar-links ${isOpen ? 'open' : ''}`}>
         <li>
-          <NavLink
-            to="/"
-            className={({ isActive }) =>
-              `${isActive ? "text-yellow-400" : "inherit"}`
-            }
-          >
-            Home
-          </NavLink>
+          <NavLink to="/" className={({ isActive }) =>`${isActive ? "text-yellow-400" : "inherit"}`}> Home </NavLink>
         </li>
         <li>
-          <NavLink
-            to="/about"
-            className={({ isActive }) =>
-              `${isActive ? "text-yellow-400" : "inherit"}`
-            }
-          >
-            About
-          </NavLink>
+          <NavLink to="/about" className={({ isActive }) =>`${isActive ? "text-yellow-400" : "inherit"}`}> About </NavLink>
         </li>
         <li>
-          <NavLink
-            to="/services"
-            className={({ isActive }) =>
-              `${isActive ? "text-yellow-400" : "inherit"}`
-            }
-          >
-            Services
-          </NavLink>
+          <NavLink to="/services"className={({ isActive }) =>`${isActive ? "text-yellow-400" : "inherit"}`}>Services</NavLink>
         </li>
         <li>
-          <NavLink
-            to="/cars"
-            className={({ isActive }) =>
-              `${isActive ? "text-yellow-400" : "inherit"}`
-            }
-          >
-            Cars
-          </NavLink>
+          <NavLink to="/cars" className={({ isActive }) =>`${isActive ? "text-yellow-400" : "inherit"}`}>Cars</NavLink>
         </li>
         <li>
-          <NavLink
-            to="/pricing"
-            className={({ isActive }) =>
-              `${isActive ? "text-yellow-400" : "inherit"}`
-            }
-          >
-            Pricing
-          </NavLink>
+          <NavLink to="/pricing" className={({ isActive }) =>`${isActive ? "text-yellow-400" : "inherit"}`}>Pricing</NavLink>
         </li>
         <li>
-          <NavLink
-            to="/contact"
-            className={({ isActive }) =>
-              `${isActive ? "text-yellow-400" : "inherit"}`
-            }
-          >
-            Contact
-          </NavLink>
+          <NavLink to="/contactUs"className={({ isActive }) =>`${isActive ? "text-yellow-400" : "inherit"}`}>Contact</NavLink>
         </li>
         <li>
-          <NavLink
-            to="/faq"
-            className={({ isActive }) =>
-              `${isActive ? "text-yellow-400" : "inherit"}`
-            }
-          >
-            FAQ
-          </NavLink>
+          <NavLink to="/Faqs" className={({ isActive }) =>`${isActive ? "text-yellow-400" : "inherit"}`}>FAQ</NavLink>
         </li>
       </ul>
 

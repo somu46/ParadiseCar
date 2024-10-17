@@ -4,8 +4,9 @@ import { RouterProvider,createBrowserRouter } from 'react-router-dom';
 import './index.css';
 
 import Root from './Root/Root';
-import About, { BookNow, ContactUs, Error} from './Pages';
+import { BookNow, ContactUs,  About, Error , Cars , Pricing , Faq} from './Pages';
 import App from './App';
+
 
 
 
@@ -19,7 +20,7 @@ const Route =createBrowserRouter([
         element:<App/>
       },
       {
-        path:"/contact",
+        path:"/contactUs",
         element:<ContactUs/>
 
       },
@@ -31,6 +32,19 @@ const Route =createBrowserRouter([
        {
         path:"/services",
         element:<BookNow/>
+       },
+
+       {
+        path:"/Pricing",
+        element:<Pricing/>
+       },
+       {
+        path:"/Cars",
+        element:<Cars/>
+       },
+       {
+        path:"/Faqs",
+        element:<Faq/>
        },
       
       {
