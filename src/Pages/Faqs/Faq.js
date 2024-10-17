@@ -1,10 +1,11 @@
 import React from 'react'
 import './faq.css'
+import Faqs from '../../Components/Faqs/faq'
 const Faq = () => {
   return (
     <div className='faq-container'>
         <div className="faq">
-            <h1>jegvbeuvve</h1>
+            <Faqs/>
         </div>
     </div>
   )
