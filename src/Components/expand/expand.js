@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { FaPlus, FaMinus } from 'react-icons/fa';
 
-const Expand = ({ children }) => {
+const Expand = ({ question, children }) => {
   const [isExpanded, setIsExpanded] = useState(false);
 
   const handleToggle = () => {
@@ -9,15 +9,20 @@ const Expand = ({ children }) => {
   };
 
   return (
-    <div>
-      <div onClick={handleToggle} style={{ cursor: 'pointer', display: 'flex', alignItems: 'center' }}>
+    <div className="expand-container">
+      <div 
+        className="expand-header" 
+        onClick={handleToggle}
+      >
+        <span>{question}</span>
         {isExpanded ? <FaMinus /> : <FaPlus />}
       </div>
 
-      {/* Conditionally render the children content when expanded */}
-      <div className={`expand-content ${isExpanded ? 'active' : ''}`}>
-        {children}
-      </div>
+      {isExpanded && (
+        <div className="expand-content">
+          {children}
+        </div>
+      )}
     </div>
   );
 };
