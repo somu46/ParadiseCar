@@ -1,3 +1,61 @@
-.pricing-container{
-    margin-top: 10rem;
+.pricing-container {
+    padding: 20px;
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pricing-container > h1 {
+    font-weight: bold;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.pricing-table {
+    width: 100%;
+    border-collapse: collapse;
+    max-width: 800px;
+    background-color: inherit;
+    border: 1px solid inherit;
+    text-align: left;
+}
+
+.pricing-table th, .pricing-table td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.pricing-table th {
+    background-color: inherit;
+    color: inherit;
+    font-weight: bold;
+}
+
+.pricing-table tr:nth-child(even) {
+    background-color: inherit;
+}
+
+
+
+/* Responsive design for mobile */
+@media (max-width: 768px) {
+    .pricing-table {
+        font-size: 0.9rem;
+    }
+
+    .pricing-container > h1 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .pricing-table {
+        font-size: 0.8rem;
+    }
+
+    .pricing-container > h1 {
+        font-size: 1.2rem;
+    }
 }

@@ -1,35 +1,70 @@
 .cars-container {
-    padding: 20px;
-    margin-top: 5rem;
-  }
-  
+  padding: 20px;
+  margin-top: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.cars-container > h1 {
+  font-weight: bold;
+  text-align: center;
+  font-family: sans-serif;
+  font-size: large;
+  margin-bottom: 20px;
+}
+
+.cars-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 300px); /* 3 cards per row */
+  gap: 40px;
+  justify-content: center; /* Center the grid */
+}
+
+.car-card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 16px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.car-image {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.car-name {
+  margin: 10px 0;
+  font-size: 1.5rem;
+}
+
+.car-description {
+  font-size: 1rem;
+  color: #555;
+}
+
+.Seat {
+  font-size: 1rem;
+  color: #333;
+}
+
+@media (max-width: 768px) {
   .cars-grid {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
+      grid-template-columns: repeat(2, 1fr); /* 2 cards per row on mobile */
   }
-  
+}
+
+@media (max-width: 480px) {
+  .cars-grid {
+      grid-template-columns: 1fr; /* 1 card per row on smaller screens */
+  }
+
   .car-card {
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    padding: 16px;
-    width: 300px;
-    text-align: center;
+      width: 100%; /* Full width of the container */
   }
-  
-  .car-image {
-    width: 100%;
-    height: auto;
-    border-radius: 4px;
-  }
-  
-  .car-name {
-    margin: 10px 0;
-    font-size: 1.5rem;
-  }
-  
-  .car-description {
-    font-size: 1rem;
-    color: #555;
-  }
-  
+}

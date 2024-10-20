@@ -1,93 +1,83 @@
-/* General styling for the container */
-div {
-    font-family: Arial, sans-serif;
-  }
-  
-  /* Container for the entire booking process */
-  .booking-container {
-    max-width: 1000px;
-    margin: 0 auto; /* Center the container */
-    padding: 40px 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  /* Header styling */
-  .booking-container h2 {
-    font-size: 2rem;
-    font-weight: bold;
-    color: #333;
-    text-align: center;
-    margin-bottom: 30px;
-    text-transform: uppercase;
-    letter-spacing: 1.2px;
-  }
-  
-  /* Horizontal layout for the process steps */
+.booking-container {
+  padding: 40px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 28px;
+  margin-bottom: 50px;
+  font-weight: bold;
+  color: #333;
+}
+
+.process-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.process {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.circle {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: #fff;
+  border: 2px solid #ddd;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+/* Colors for each circle */
+.green { border-color: #32CD32; color: #32CD32; }
+.blue { border-color: #1E90FF; color: #1E90FF; }
+.pink { border-color: #FF69B4; color: #FF69B4; }
+.yellow { border-color: #FFD700; color: #FFD700; }
+
+.step-info {
+  text-align: center;
+}
+
+.step-info h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+  color: #333;
+}
+
+.step-info p {
+  font-size: 14px;
+  max-width: 120px;
+  color: #666;
+  text-align: center;
+  margin: 5px 0 0 0;
+}
+
+/* Arrow Styles */
+.arrow {
+  font-size: 24px;
+  color: #888;
+  margin: -2rem 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
   .process-row {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    flex-wrap: wrap; /* Allows wrapping if screen is too narrow */
+    flex-direction: column;
   }
-  
-  /* Individual Process Step */
-  .process {
-    background-color: inherit;
-    border-radius: 8px;
-    padding: 20px;
-    width: 22%; /* Adjust width to fit 4 items in a row */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    text-align: center; /* Center align the content */
+  .arrow {
+    transform: rotate(90deg);
+    margin: 20px 0;
   }
-  
-  .process:hover {
-    transform: translateY(-5px); /* Adds a small lift effect on hover */
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
-  }
-  
-  /* Heading for each process step */
-  .process h3 {
-    font-size: 1.3rem;
-    color: #1a1a1a;
-    margin-bottom: 10px;
-    text-transform: capitalize;
-    letter-spacing: 0.5px;
-    position: relative;
-  }
-  
-  /* Underline the heading with a custom design */
-  .process h3::after {
-    content: '';
-    display: block;
-    width: 40px;
-    height: 3px;
-    background-color: #f5a623;
-    margin: 0 auto; /* Center the underline */
-    border-radius: 2px;
-    margin-top: 5px;
-  }
-  
-  /* Paragraphs within the process step */
-  .process p {
-    font-size: 1rem;
-    color: #555;
-    line-height: 1.6;
-    margin: 0;
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 1000px) {
-    .process {
-      width: 45%; /* Reduce width for smaller screens */
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .process {
-      width: 100%; /* Stacks steps vertically on smaller screens */
-    }
-  }
-  
+}
