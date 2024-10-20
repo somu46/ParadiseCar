@@ -1,6 +1,6 @@
 import React from 'react';
 import './About.css'; // Import the CSS file
-import Paradise from '../../Assets/Dark_ParadiseCar.png'
+import Paradise from '../../Assets/Paradise Car Banner.jpg'
 const HeroSection = () => {
   return (
     <div className="hero-container">

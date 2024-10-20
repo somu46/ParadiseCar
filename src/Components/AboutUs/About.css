@@ -1,69 +1,117 @@
 .hero-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: inherit;
-    padding: 40px;
-    border-radius: 10px;
-    color: white;
-  }
-  
-  .hero-content {
-    max-width: 50%;
-  }
-  
-  .hero-title {
-    font-size: 2.5rem;
-    font-weight: bold;
-    margin-bottom: 20px;
-    line-height: 1.2;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  background-color: inherit;
+  padding: 40px;
+  border-radius: 10px;
+  color: white;
+  gap: 20px; /* Added gap for better spacing when wrapping */
+}
+
+.hero-content {
+  flex: 1; /* Allows it to grow and shrink based on available space */
+  max-width: 600px; /* Set a max width for better control */
+}
+
+.hero-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  line-height: 1.2;
+  color: inherit; /* Ensure it inherits the container's color */
+}
+
+.hero-title > span {
+  color: gold;
+}
+
+.hero-description {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  line-height: 1.5; /* Improved readability */
+}
+
+.features-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.features-list li {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.rent-button {
+  background-color: #555;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.rent-button:hover {
+  background-color: #777;
+}
+
+.hero-image {
+  flex: 1; /* Allows it to grow and shrink based on available space */
+  max-width: 700px; /* Set a max width for better control */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .hero-container {
+      flex-direction: column;
+      padding: 20px;
+      text-align: center; /* Center content for better mobile view */
   }
 
-  .hero-title>span{
-    color: gold;
+  .hero-content, .hero-image {
+      max-width: 100%; /* Full width for mobile screens */
   }
-  
+
+  .hero-title {
+      font-size: 2rem;
+  }
+
   .hero-description {
-    font-size: 1.1rem;
-    margin-bottom: 20px;
+      font-size: 1rem;
   }
-  
-  .features-list {
-    list-style: none;
-    padding: 0;
-    margin-bottom: 20px;
-  }
-  
-  .features-list li {
-    font-size: 1rem;
-    margin-bottom: 10px;
-    display: flex;
-    align-items: center;
-  }
-  
+
   .rent-button {
-    background-color: #555;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+      padding: 10px 16px;
+      font-size: 0.9rem;
   }
-  
-  .rent-button:hover {
-    background-color: #777;
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+      font-size: 1.8rem;
   }
-  
-  .hero-image {
-    position: relative;
-    width: 40%;
+
+  .hero-description {
+      font-size: 0.9rem;
   }
-  
-  .hero-image img {
-    width: 100%;
-    border-radius: 10px;
+
+  .rent-button {
+      padding: 8px 14px;
+      font-size: 0.8rem;
   }
-  
-  
+}

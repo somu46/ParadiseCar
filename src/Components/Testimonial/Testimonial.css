@@ -17,7 +17,7 @@
   }
   
   .testimonial-card {
-    background-color: #444; /* Dark card background */
+    background-color: inherit; /* Dark card background */
     color: #fff;
     padding: 20px;
     border-radius: 10px;
@@ -53,6 +53,7 @@
   .review {
     font-size: 14px;
     line-height: 1.6;
+    color: black;
   }
   
   @media screen and (max-width: 768px) {
