@@ -9,6 +9,7 @@ import Faq from "./Faqs/Faq";
 import ErrorBoundary from "./Error/ErrorBondary/ErrorBoundray.js"
 
 
+
 function BookNow() {
     return (
 
