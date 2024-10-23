@@ -4,6 +4,7 @@ import Faq from "../../Components/Faqs/faq";
 import BookingP from "../../Components/Booking/bookingP";
 import Testimonial from "../../Components/Testimonial/Testimonial";
 import About from '../../Components/AboutUs/About'
+
 const Home = () => {
   return (
     <>
