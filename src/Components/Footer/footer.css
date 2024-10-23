@@ -4,7 +4,6 @@
     align-items: center;
     justify-content: center;
     font-weight: 300;
-    color: black;
     border: 3px solid #dfdede;   
 }
 .element {
@@ -22,15 +21,15 @@
 /*chatgpt*/
 .footer.light {
     background-color: inherit;
-    color: #333333;
+    color: #101111;
   }
   
   .footer.dark {
     background-color: inherit;
-    color: #e0e0e0;
+    color: white;
   }
   
   .footer .text-black {
-    color: inherit; /* Inherit the color based on dark or light mode */
+    color: white; /* Inherit the color based on dark or light mode */
   }
   
