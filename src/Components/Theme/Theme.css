@@ -13,7 +13,7 @@
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 body.dark-mode .theme-toggle-button {
-  background-color: #25323b;
+  background-color: #1A222C;
   color: #fff;
 }
 /* Global styles for dark mode */

@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+  *.dark{
+    background:#1A222C;
+  }
+
+
 *{
    scrollbar-width: thin;
    scrollbar-color: #888 #333;
@@ -12,7 +17,7 @@
   width: 8px;
 }
 *::-webkit-scrollbar-track{
-  background: #333;
+  background: #1A222C;
 }
 
 
