@@ -14,14 +14,14 @@
 
 /* Light Mode */
 .navbar.light {
-  background-color: #1A222C;
+  /* background-color: #1A222C; */
   color: #1a1a1a;
 }
 
 /* Dark Mode */
 .navbar.dark {
-  background-color: rgb(36,48,63);
-  color: #f0f0f0;
+  background-color: #24303F;
+  color: #FFFFE0;
 }
 
 /* Logo Container */

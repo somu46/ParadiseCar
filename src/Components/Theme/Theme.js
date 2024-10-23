@@ -58,12 +58,21 @@ export default function CustomizedSwitches() {
   const lightTheme = createTheme({
     palette: {
       mode: 'light',
+      background: {
+        default: '#f5f5f5', // Light background color
+      },
     },
   });
 
   const darkTheme = createTheme({
     palette: {
       mode: 'dark',
+      background: {
+        default: '#1A222C', // Dark mode background color
+      },
+      text: {
+        primary: '#ffffff', // Set primary text color to white
+      },
     },
   });
 
