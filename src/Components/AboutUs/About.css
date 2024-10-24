@@ -3,10 +3,10 @@
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  background-color: inherit;
+  /* background-color: inherit; */
   padding: 40px;
   border-radius: 10px;
-  color: white;
+  /* color: white; */
   gap: 20px; /* Added gap for better spacing when wrapping */
 }
 
@@ -20,7 +20,7 @@
   font-weight: bold;
   margin-bottom: 20px;
   line-height: 1.2;
-  color: inherit; /* Ensure it inherits the container's color */
+  /* color: inherit;  */
 }
 
 .hero-title > span {
@@ -47,8 +47,8 @@
 }
 
 .rent-button {
-  background-color: #555;
-  color: white;
+  /* background-color: #555; */
+  /* color: white; */
   padding: 12px 20px;
   border: none;
   border-radius: 5px;
@@ -58,7 +58,7 @@
 }
 
 .rent-button:hover {
-  background-color: #777;
+  /* background-color: #777; */
 }
 
 .hero-image {
