@@ -10,7 +10,7 @@ const Navbar = ({ isDarkMode, handleThemeToggle }) => {
   const [isOpen, setOpen] = useState(false);
 
   return (
-    <nav className={`navbar ${isDarkMode ? 'dark' : 'light'}`}>
+    <nav className={`navbar bg-white  md:bg-transparent  bg-opacity-90 md:bg-opacity-70  backdrop-blur-md ${isDarkMode ? 'dark' : 'light'}`}>
       <div className="navbar-logo-container">
         <a href='https://paradisecar.in/'>
           <img
