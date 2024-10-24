@@ -61,6 +61,9 @@ export default function CustomizedSwitches() {
       background: {
         default: '#f5f5f5', // Light background color
       },
+      text: {
+        primary: '#000000', // Set primary text color to black
+      },
     },
   });
 

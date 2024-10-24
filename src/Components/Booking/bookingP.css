@@ -7,7 +7,7 @@ h2 {
   font-size: 28px;
   margin-bottom: 50px;
   font-weight: bold;
-  color: #333;
+  color: white;
 }
 
 .process-row {
@@ -24,36 +24,55 @@ h2 {
   align-items: center;
   justify-content: center;
   position: relative;
+  border: white 2px solid;
+  border-radius: 10px;
+  width: 150px;
+  height: 200px;
+  padding: 20px;
+  box-sizing: border-box;
+  border: 2px solid black;
 }
 
 .circle {
-  width: 60px;
-  height: 60px;
+  width: 80px; /* Ensure perfect circle size */
+  height: 80px; /* Ensure perfect circle size */
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 50%;
   background-color: #fff;
-  border: 2px solid #ddd;
-  font-size: 24px;
   margin-bottom: 10px;
+  /* Default border color */
 }
 
-/* Colors for each circle */
-.green { border-color: #32CD32; color: #32CD32; }
-.blue { border-color: #1E90FF; color: #1E90FF; }
-.pink { border-color: #FF69B4; color: #FF69B4; }
-.yellow { border-color: #FFD700; color: #FFD700; }
+/* Make sure the icons are not squeezed */
+.circle svg {
+  font-size: 32px; /* Set the icon size */
+}
+
+/* Colors for each circle's border */
+.green {
+  border: 3px solid #32CD32; /* Green border */
+  color: #32CD32;
+}
+
+.blue {
+  border: 3px solid #1E90FF; /* Blue border */
+  color: #1E90FF;
+}
+
+.pink {
+  border: 3px solid #FF69B4; /* Pink border */
+  color: #FF69B4;
+}
+
+.yellow {
+  border: 3px solid #FFD700; /* Yellow border */
+  color: #FFD700;
+}
 
 .step-info {
   text-align: center;
-}
-
-.step-info h3 {
-  font-size: 18px;
-  font-weight: bold;
-  margin: 0;
-  color: #333;
 }
 
 .step-info p {
@@ -68,7 +87,8 @@ h2 {
 .arrow {
   font-size: 24px;
   color: #888;
-  margin: -2rem 10px;
+  margin: 0 10px;
+  align-self: center; /* Ensure arrow is centered */
 }
 
 /* Responsive Design */

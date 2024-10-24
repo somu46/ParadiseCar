@@ -45,7 +45,6 @@
 .faq-right {
   width: 60%;
 }
-
 /* FAQ Item styling */
 .expand-container {
   background-color: inherit;
@@ -73,9 +72,10 @@
 
 /* Content to show/hide */
 .expand-content {
-  margin-top: 10px;
-  color: #666;
-  font-size: 14px;
-  line-height: 1.6;
-  transition: all 0.3s ease;
+  display: flex;
+  /* justify-content: space-between; */
+  font-size: 16px;
+  font-weight: 600;
+  color: #41479b;
+  
 }
