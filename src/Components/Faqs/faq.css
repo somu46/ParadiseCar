@@ -70,12 +70,12 @@
   color: #41479b;
 }
 
+
 /* Content to show/hide */
 .expand-content {
   display: flex;
-  /* justify-content: space-between; */
+  justify-content: space-between;
   font-size: 16px;
   font-weight: 600;
   color: #41479b;
-  
 }

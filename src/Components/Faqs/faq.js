@@ -5,7 +5,7 @@ import Expand from '../expand/expand';
 const Faq = () => {
   const faqs = [
     {
-      question: 'What Is Paradise Car Rental Service?',
+      question: ' What Is Paradise Car Rental Service?',
       answer: 'Paradise car rental service provides the best journey to your destination.',
     },
     {
@@ -35,8 +35,8 @@ const Faq = () => {
       </div>
       <div className="faq-right">
         {faqs.map((faq, index) => (
-          <Expand key={index} question={faq.question}>
-            <p>{faq.answer}</p>
+          <Expand key={index} question={`Q.  ${faq.question}`}>
+            <p className='text-left'>A: {faq.answer}</p>
           </Expand>
         ))}
       </div>
