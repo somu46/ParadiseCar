@@ -48,7 +48,7 @@ const BookNowPageCom = () => {
   return (
     <>
       <div className=" mt-[0.25rem] w-full lg:w-[100%] mb-[15rem] lg:mb-3 lg:h-auto flex justify-center items-center text-black ">
-        <div className=" background-image flex flex-wrap flex-col lg:flex-row justify-between inherit   border-2 shadow-lg rounded-md w-[100%] h-full lg:min-h-[70%] p-1 lg:overflow-hidden" >
+        <div className=" background-image flex flex-wrap flex-col lg:flex-row justify-between    border-2 shadow-lg rounded-md w-[100%] h-full lg:min-h-[70%] p-1 lg:overflow-hidden" >
           {/* Left Section (Form & Text) */}
           <div className="w-full md:w-1/2 flex flex-col justify-start p-5 ">
             <div className="mb-6">
@@ -66,7 +66,7 @@ const BookNowPageCom = () => {
               onSubmit={handleSubmit(handleBookFromData)}
               ref={formRef} 
             >
-              <div className="  flex flex-wrap lg:flex-nowrap justify-center lg:justify-between gap-4 mb-3">
+              <div className="  flex flex-wrap lg:flex-nowrap justify-center lg:justify-between gap-3 mb-2">
                 <input
                   type="text"
                   placeholder="Full Name"
@@ -83,7 +83,7 @@ const BookNowPageCom = () => {
                 <input
                   type="text"
                   placeholder="10 Digit Mobile No"
-                  className="p-3 border-2 border-gray-300 rounded-lg bg-inherit w-full lg:w-1/2 mb-3 lg:mb-0"
+                  className="p-3 border-2 border-gray-300 rounded-lg bg-inherit dark:text-inherit w-full lg:w-1/2 mb-3 lg:mb-0"
                   {...register("MobileNum", {
                     required: true,
                     pattern: {
