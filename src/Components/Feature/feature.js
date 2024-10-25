@@ -5,55 +5,49 @@ import { GiCityCar, GiWatch } from "react-icons/gi";
 import { FaCity } from "react-icons/fa";
 import { MdOutlinePrivacyTip } from "react-icons/md";
 import { FaIndianRupeeSign } from "react-icons/fa6";
-import Bestprice from '../../Assets/Best_price.png'
+import Bestprice from '../../Assets/Best_price.png';
+
+const featuresList = [
+  { icon: <IoEarth aria-label="Earth Icon" />, text: "Anywhere Delivery" },
+  { icon: <GiCityCar aria-label="City Car Icon" />, text: "Fresh and Hygiene Maintained" },
+  { icon: <MdOutlinePrivacyTip aria-label="Privacy Tip Icon" />, text: "Privacy and Freedom" },
+  { icon: <FaCity aria-label="City Icon" />, text: "Kolkata" },
+];
+
+const whyRideList = [
+  { icon: <FaIndianRupeeSign aria-label="Rupee Icon" />, text: "Multiple Payment Options" },
+  { icon: <GiWatch aria-label="Watch Icon" />, text: "Punctuality" },
+  { icon: <img src={Bestprice} alt="Best Price" className="icon" />, text: "Best Price Guarantee" },
+  { icon: <FaCity aria-label="City Icon" />, text: "Easy Cancellation" },
+];
+
+const FeatureBox = ({ icon, text }) => (
+  <div className="feature-box">
+    <div className="icon">{icon}</div>
+    <p>{text}</p>
+  </div>
+);
 
 const Feature = () => {
   return (
-    <div className='featureWhy'>
-    <div className='features'>
-      <h1>Features & Benefits</h1>
-      <div className="features-container">
-        <div className="feature-box">
-          <IoEarth className="icon" />
-          <p>Anywhere Delivery</p>
+    <div className="feature-container">
+      <section className="features">
+        <h1>Features & Benefits</h1>
+        <div className="features-container">
+          {featuresList.map((feature, index) => (
+            <FeatureBox key={index} icon={feature.icon} text={feature.text} />
+          ))}
         </div>
-        <div className="feature-box">
-          <GiCityCar className="icon" />
-          <p>Fresh and Hygiene Maintained</p>
-        </div>
-        <div className="feature-box">
-          <MdOutlinePrivacyTip className="icon" />
-          <p>Privacy and Freedom</p>
-        </div>
-        <div className="feature-box">
-          <FaCity className="icon" />
-          <p>Kolkata</p>
-        </div>
-      </div>
-    </div>
+      </section>
 
-
-<div className='WhyWe'>
-      <h1>Why ride with Paradise?</h1>
-      <div className="features-container">
-        <div className="feature-box">
-          <FaIndianRupeeSign className="icon" />
-          <p>Multiple Payment Options</p>
+      <section className="whyRide">
+        <h1>Why ride with Paradise?</h1>
+        <div className="features-container">
+          {whyRideList.map((feature, index) => (
+            <FeatureBox key={index} icon={feature.icon} text={feature.text} />
+          ))}
         </div>
-        <div className="feature-box">
-          <GiWatch className="icon" />
-          <p>Punctuality</p>
-        </div>
-        <div className="feature-box">
-          <img src={Bestprice} alt='bal' className="icon" />
-          <p>Best Price Guarantee</p>
-        </div>
-        <div className="feature-box">
-          <FaCity className="icon" />
-          <p>Easy Cancellation</p>
-        </div>
-      </div>
-    </div>
+      </section>
     </div>
   );
 };
