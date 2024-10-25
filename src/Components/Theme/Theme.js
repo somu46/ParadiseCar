@@ -59,10 +59,10 @@ export default function CustomizedSwitches() {
     palette: {
       mode: 'light',
       background: {
-        default: '#f5f5f5', // Light background color
+        default: '#f5f5f5',
       },
       text: {
-        primary: '#000000', // Set primary text color to black
+        primary: '#000000', 
       },
     },
   });
@@ -74,9 +74,21 @@ export default function CustomizedSwitches() {
         default: '#1A222C', // Dark mode background color
       },
       text: {
-        primary: '#ffffff', // Set primary text color to white
+        primary: '#ffffff',
       },
     },
+    // components: {
+    //   MuiInputBase: {
+    //     styleOverrides: {
+    //       root: {
+    //         color: '#ffffff', // Sets text color for input fields
+    //       },
+    //       input: {
+    //         color: '#ffffff', // Also ensures text inside the input is white
+    //       },
+    //     },
+    //   },
+    // },
   });
 
   const handleChange = (event) => {

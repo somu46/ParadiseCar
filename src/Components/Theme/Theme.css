@@ -22,7 +22,7 @@ body.dark-mode {
   color: #fff;
 }
 
-/* Ensure that all headings, paragraphs, and anchor tags adopt dark mode colors */
+
 body.dark-mode h1,
 body.dark-mode h2,
 body.dark-mode h3,
@@ -31,13 +31,13 @@ body.dark-mode h5,
 /* body.dark-mode h6, */
 body.dark-mode p,
 body.dark-mode a,input {
-  color: #fff; /* Set a white color for text in dark mode */
+  color: #fff; 
 }
 
 
-/* Additional styling for links to change hover color in dark mode */
+
 body.dark-mode a:hover {
-  color: #ffdd57; /* Yellowish hover effect in dark mode */
+  color: #ffdd57; 
 }
 
 /* Body base styling */

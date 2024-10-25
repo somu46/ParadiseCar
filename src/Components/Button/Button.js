@@ -1,7 +1,7 @@
 import { FaTaxi } from 'react-icons/fa';
 
 
-const BookNowButton = ({ onClick, label = "Book Now" }) => {
+const Button = ({ onClick, label = "Book Now" }) => {
   
     return (
       <button
@@ -20,5 +20,5 @@ const BookNowButton = ({ onClick, label = "Book Now" }) => {
     );
   };
   
-  export default BookNowButton;
+  export default Button;
   

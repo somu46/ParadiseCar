@@ -70,7 +70,7 @@ const Footer = ({ isDarkMode }) => {
                 type="email"
                 name="Email"
                 className={`border-gray-500 rounded-xl w-full md:w-64 lg:w-75 xl:w-120 border px-4 py-2 ${
-                  isDarkMode ? "bg-gray-700 text-white" : "bg-white text-black"
+                  isDarkMode ? "bg-gray-700 text-white" : "bg-white "
                 }`}
               />
               <button
