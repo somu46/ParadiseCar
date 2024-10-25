@@ -6,6 +6,7 @@ import BookNows from "./BookNow/BookNow";
 import Cars from "./Cars/car";
 import Pricing from "./Pricing/Pricing";
 import Faq from "./Faqs/Faq";
+import Services from "./Services/Services";
 import ErrorBoundary from "./Error/ErrorBondary/ErrorBoundray.js"
 
 
@@ -34,4 +35,4 @@ function About() {
 
 
 
-export { Home,ContactUs,About,BookNow, Error ,Pricing , Cars, Faq };
+export { Home,ContactUs,About,BookNow, Error ,Pricing , Cars, Faq, Services  };

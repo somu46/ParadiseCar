@@ -16,6 +16,7 @@
   padding: 10px;
   font-size: 1rem;
   width: 100%;
+  background: transparent;
   border: 1px solid #ccc;
   border-radius: 5px;
 }

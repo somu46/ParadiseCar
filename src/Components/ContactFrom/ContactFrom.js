@@ -64,7 +64,7 @@ const ContactForm = () => {
         <h1 className="text-center text-orange-500 ">
           DO YOU HAVE ANY QUESTIONS?
         </h1>
-        <input
+        <input 
           type="text"
           placeholder="Enter Your Name"
           {...register("fullName", {
