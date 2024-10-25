@@ -14,12 +14,12 @@ const Expand = ({ question, children }) => {
         className="expand-header" 
         onClick={handleToggle}
       >
-        <span>{question}</span>
+        <span className='text-orange-800'>{question}</span>
         {isExpanded ? <FaMinus /> : <FaPlus />}
       </div>
 
       {isExpanded && (
-        <div className="expand-content">
+        <div className="expand-content ">
           {children}
         </div>
       )}
