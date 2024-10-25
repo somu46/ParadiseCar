@@ -16,7 +16,7 @@ const Root=()=>{
     return(
         <>
          <Navbar isDarkMode={isDarkMode} handleThemeToggle={handleThemeToggle} />
-          <Outlet isDarkMode={isDarkMode}/>
+          <Outlet/>
           <Footer isDarkMode={isDarkMode} />
         </>
     );
