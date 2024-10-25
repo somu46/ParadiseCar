@@ -1,7 +1,7 @@
 import React from 'react';
 import './About.css'; // Import the CSS file
 import Paradise from '../../Assets/Paradise Car Banner.jpg'
-import BookNowButton from '../Button/Button';
+import Button from '../Button/Button';
 import { useNavigate } from 'react-router-dom';
 
 
@@ -26,7 +26,7 @@ const HeroSection = () => {
           <li>✔ Luxury Cruiser Fleet</li>
           <li>✔ Sporty Velocity Models</li>
         </ul>
-        <BookNowButton onClick={handleRent} label="Rent now"/>
+        <Button onClick={handleRent} label="Rent now"/>
       </div>
       <div className="hero-image">
         <img src={Paradise} alt="Car rental" />

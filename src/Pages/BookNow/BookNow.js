@@ -50,7 +50,7 @@ const BookNowPageCom = () => {
       <div className=" mt-[0.25rem] w-full lg:w-[100%] mb-[15rem] lg:mb-3 lg:h-auto flex justify-center items-center text-black ">
         <div className=" background-image flex flex-wrap flex-col lg:flex-row justify-between    border-2 shadow-lg rounded-md w-[100%] h-full lg:min-h-[70%] p-1 lg:overflow-hidden" >
           {/* Left Section (Form & Text) */}
-          <div className="w-full md:w-1/2 flex flex-col justify-start p-5 ">
+          <div className="w-full md:w-1/2 flex flex-col justify-start lg:p-5 ">
             <div className="mb-6">
               <h6 className="text-3xl font-bold text-start text-orange-600 mb-2">
                 Booking for Outstation Trip
@@ -70,7 +70,7 @@ const BookNowPageCom = () => {
                 <input
                   type="text"
                   placeholder="Full Name"
-                  className="p-3 border-2 border-gray-300 rounded-lg bg-inherit w-full lg:w-1/2 mb-3 lg:mb-0 "
+                  className="p-3 border-2 border-gray-300 rounded-lg bg-sky-50 w-full lg:w-1/2 mb-3 lg:mb-0 "
                   {...register("fullName", {
                     required: true,
                   })}
@@ -83,7 +83,7 @@ const BookNowPageCom = () => {
                 <input
                   type="text"
                   placeholder="10 Digit Mobile No"
-                  className="p-3 border-2 border-gray-300 rounded-lg bg-inherit dark:text-inherit w-full lg:w-1/2 mb-3 lg:mb-0"
+                  className="p-3 border-2 border-gray-300 rounded-lg bg-sky-50 dark:text-inherit w-full lg:w-1/2 mb-3 lg:mb-0"
                   {...register("MobileNum", {
                     required: true,
                     pattern: {
@@ -101,7 +101,7 @@ const BookNowPageCom = () => {
               <input
                 type="text"
                 placeholder="Enter your Destination"
-                className="  p-3 border-2 border-gray-300 bg-inherit rounded-lg"
+                className="  p-3 border-2 border-gray-300 bg-sky-50 rounded-lg"
                 {...register("destinationLocation", {
                   required: true,
                 })}
@@ -114,7 +114,7 @@ const BookNowPageCom = () => {
               <input
                 type="text"
                 placeholder="Pick up Address"
-                className="p-3 border-2 border-gray-300 rounded-lg bg-inherit"
+                className="p-3 border-2 border-gray-300 rounded-lg bg-sky-50"
                 {...register("PicUpLocation", {
                   required: true,
                 })}
@@ -126,7 +126,7 @@ const BookNowPageCom = () => {
               )}
 
               <div className=" flex lg:flex-nowrap flex-wrap  justify-between gap-4">
-                <div className=" flex flex-wrap flex-col  bg-inherit w-full">
+                <div className=" flex flex-wrap flex-col  bg-sky-50 rounded-md w-full">
                   {/* <label className="px-3 text-start ">Pickup Date</label> */}
                   <DatePicker
                     selected={selectedPicupDate}
@@ -163,7 +163,7 @@ const BookNowPageCom = () => {
                     </h6>
                   )}
                 </div>
-                <div className=" flex flex-wrap flex-col  w-full">
+                <div className=" flex flex-wrap flex-col bg-sky-50 w-full">
                   {/* <label className="px-3 text-start">DropOff Date</label> */}
 
                   <DatePicker
@@ -281,7 +281,7 @@ const BookNowPageCom = () => {
 const BookNow = () => {
   return (
     <>
-      <div className="   mt-[6rem] min-w-full min-h-screen flex flex-col items-center p-3 my-5">
+      <div className="   mt-[6rem] min-w-full min-h-screen flex flex-col items-center lg:p-3 my-5">
         <BookNowPageCom />
       </div>
     </>

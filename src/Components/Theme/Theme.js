@@ -77,18 +77,18 @@ export default function CustomizedSwitches() {
         primary: '#ffffff',
       },
     },
-    components: {
-      MuiInputBase: {
-        styleOverrides: {
-          root: {
-            color: '#ffffff', // Sets text color for input fields
-          },
-          input: {
-            color: '#ffffff', // Also ensures text inside the input is white
-          },
-        },
-      },
-    },
+    // components: {
+    //   MuiInputBase: {
+    //     styleOverrides: {
+    //       root: {
+    //         color: '#ffffff', // Sets text color for input fields
+    //       },
+    //       input: {
+    //         color: '#ffffff', // Also ensures text inside the input is white
+    //       },
+    //     },
+    //   },
+    // },
   });
 
   const handleChange = (event) => {

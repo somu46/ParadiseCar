@@ -57,7 +57,7 @@ const ContactForm = () => {
   return (
     <div className=" contact-form-container m-0 lg:m-1 w-full lg:w-1/2 p-0 lg:p-3">
       <form
-        className="  contact-form mx-0 px-0 lg:mx-3 py-5 lg:px-5"
+        className="  contact-form text-gray-700 mx-0 px-0 lg:mx-3 py-5 lg:px-5"
         onSubmit={handleSubmit(handlefromData)}
         ref={fromref}
       >

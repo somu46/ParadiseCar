@@ -10,15 +10,18 @@
   margin-bottom: 10px;
   font-weight: bold;
 }
-
+.contact-form textarea{
+  background: transparent;
+}
 .contact-form input,
 .contact-form textarea {
   padding: 10px;
   font-size: 1rem;
   width: 100%;
-  background: transparent;
   border: 1px solid #ccc;
   border-radius: 5px;
+  background:rgb(210, 223, 228);
+  
 }
 
 .contact-form textarea {
