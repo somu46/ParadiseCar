@@ -1,12 +1,12 @@
 import React from 'react'
 // import './bookNow.css'
-import Booknow from '../../Components/BookNowComponent/BookNowPageCom';
+import BookNow from '../../Components/BookNow/BookNowPageCom.js';
 
 const bookNow = () => {
   return (
     <div>
         <div className="mt-[6rem]">
-            <Booknow/>
+            <BookNow/>
         </div>
 
     </div>
