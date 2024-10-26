@@ -4,6 +4,8 @@ import './Services.css';
 import Airport from '../../Assets/Airport.png'
 import outstation from '../../Assets/outstation.jpg'
 import kilometer from '../../Assets/kilometer.png'
+import { Button } from '@mui/material';
+
 const Services = () => {
   const [showModal, setShowModal] = useState(false);
   const [currentService, setCurrentService] = useState(null);
@@ -48,7 +50,8 @@ const Services = () => {
               <img src={service.image} alt={service.title} />
               <h2>{service.title}</h2>
               <p>{service.description}</p>
-              <button className="btn-learn-more" onClick={() => openModal(service)}>Learn More</button>
+              <Button className="btn-learn-more" onClick={() => openModal(service)}>Learn More</Button>
+              <Button variant="outlined">Book Now</Button>
             </div>
           ))}
         </div>
