@@ -1,4 +1,4 @@
-import  { BookNowPageCom } from "../BookNow/BookNow";
+import  BookNowPageCom from "../BookNow/BookNow";
 import Feature from "../../Components/Feature/feature";
 import Faq from "../../Components/Faqs/faq";
 import BookingP from "../../Components/Booking/bookingP";
