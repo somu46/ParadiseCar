@@ -4,7 +4,7 @@ import { RouterProvider,createBrowserRouter } from 'react-router-dom';
 import './index.css';
 
 import Root from './Root/Root';
-import { Services, ContactUs,  About, Error , Cars , Pricing , Faq} from './Pages';
+import { Services, ContactUs,  About, Error , Cars , Pricing , Faq, BookNow} from './Pages';
 import App from './App';
 
 
@@ -45,6 +45,10 @@ const Route =createBrowserRouter([
        {
         path:"/Faqs",
         element:<Faq/>
+       },
+       {
+        path:"/BookNow",
+        element:<BookNow/>
        },
       
       {

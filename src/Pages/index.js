@@ -2,7 +2,7 @@ import Home from "./Home/Home";
 import ContactUs from "./Contact/contactUs";
 import AboutUs from "./About/AbouUs";
 import Error from "./Error/Error";
-
+import BookNow from "./Booking/bookNow";
 import Cars from "./Cars/car";
 import Pricing from "./Pricing/Pricing";
 import Faq from "./Faqs/Faq";
@@ -26,4 +26,4 @@ function About() {
 
 
 
-export { Home,ContactUs,About, Error ,Pricing , Cars, Faq, Services  };
+export { Home,ContactUs,About, Error ,Pricing , Cars, Faq, Services, BookNow  };
