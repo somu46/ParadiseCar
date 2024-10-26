@@ -12,7 +12,10 @@ const HeroSection = () => {
   const navigate=useNavigate();
 
   const handleRent=()=>{
-    navigate("/bookNow")
+    // console.log();
+    
+    navigate("/BookNow");
+    window.scrollTo(0, 0);
   }
   return (
     <div className="hero-container">

@@ -5,10 +5,21 @@ import Airport from '../../Assets/Airport.png'
 import outstation from '../../Assets/outstation.jpg'
 import kilometer from '../../Assets/kilometer.png'
 import { Button } from '@mui/material';
+import { useNavigate } from 'react-router-dom';
+
+
 
 const Services = () => {
   const [showModal, setShowModal] = useState(false);
   const [currentService, setCurrentService] = useState(null);
+  const navigate=useNavigate();
+
+const handleNavigate=()=>{
+navigate("/BookNow");
+// console.log();
+
+window.scrollTo(0, 0);
+}
 
   const services = [
     { 
@@ -51,7 +62,7 @@ const Services = () => {
               <h2>{service.title}</h2>
               <p>{service.description}</p>
               <Button className="btn-learn-more" onClick={() => openModal(service)}>Learn More</Button>
-              <Button variant="outlined">Book Now</Button>
+              <Button onClick={handleNavigate} variant="outlined">Book Now</Button>
             </div>
           ))}
         </div>
