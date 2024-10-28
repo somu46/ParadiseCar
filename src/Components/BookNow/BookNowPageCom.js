@@ -11,11 +11,10 @@ const BookNowPageCom = () => {
   const [selectedPicupDate, setSelectedpicupDate] = useState(null);
   const [selectedDropoffDate, setSelectedDropoffDate] = useState(null);
   const [airportOpt, setAirportOpt] = useState(" ");
-  const formRef=useRef()
+  const formRef = useRef();
 
-  
   const [err, setErr] = useState("");
-  
+
   const {
     register,
     setValue, //manualy update value
@@ -24,18 +23,14 @@ const BookNowPageCom = () => {
     handleSubmit,
     formState: { errors },
   } = useForm();
-  
-  
+
   // for srom data submmistion
 
   const handleBookFromData = (data) => {
-  
     setErr(""); // at frist we counter error as empty
 
     try {
       console.log(data);
-
-     
 
       // console.log(value);
       formRef.current.reset();
@@ -48,9 +43,9 @@ const BookNowPageCom = () => {
   return (
     <>
       <div className="  w-full lg:w-[100%] mb-[15rem] lg:mb-3 lg:h-auto flex justify-center items-center text-black ">
-        <div className=" background-image flex flex-wrap flex-col lg:flex-row justify-between    border-2 shadow-lg rounded-md w-[100%] h-full lg:min-h-[70%] p-1 lg:overflow-hidden" >
+        <div className=" background-image flex flex-wrap flex-col lg:flex-row justify-between border-red-500   border-2 shadow-lg rounded-md w-[100%] h-auto  p-1 lg:overflow-hidden">
           {/* Left Section (Form & Text) */}
-          <div className="w-full md:w-1/2 flex flex-col justify-start lg:codep-5 ">
+          <div className="w-full md:w-1/2 md:h-auto flex flex-col justify-start lg:codep-5 border-2 border-blue-600 ">
             <div className="mb-6">
               <h6 className="text-3xl font-bold text-start text-orange-600 mb-2">
                 Booking for Outstation Trip
@@ -64,7 +59,7 @@ const BookNowPageCom = () => {
             <form
               className="flex flex-wrap flex-col gap-4 "
               onSubmit={handleSubmit(handleBookFromData)}
-              ref={formRef} 
+              ref={formRef}
             >
               <div className="  flex flex-wrap lg:flex-nowrap justify-center lg:justify-between gap-3 mb-2">
                 <input
@@ -133,15 +128,14 @@ const BookNowPageCom = () => {
                     onChange={(date) => {
                       setSelectedpicupDate(date);
                       setValue("PickDateTime", date);
-                      
-                      if(!date){
-                        setError("PickDateTime",{
-                          message:"* pick up date and time is required"
-                        })
-                      }else{
-                        clearErrors("PickDateTime")
+
+                      if (!date) {
+                        setError("PickDateTime", {
+                          message: "* pick up date and time is required",
+                        });
+                      } else {
+                        clearErrors("PickDateTime");
                       }
-                      
                     }}
                     showTimeSelect
                     timeFormat="hh:mm aa"
@@ -150,7 +144,7 @@ const BookNowPageCom = () => {
                     className="p-3 border-2 border-gray-300  rounded-lg w-full "
                     placeholderText="Select Pickup Date and Time"
                   />
-                                   
+
                   <input
                     type="hidden"
                     {...register("PickDateTime", {
@@ -213,19 +207,18 @@ const BookNowPageCom = () => {
                     const tripData = e.target.value;
                     setAirportOpt(tripData);
                     setValue("tripType", tripData);
-                    
-                      if(!tripData){
-                        setError("tripType",{
-                              message:" Please selact  your trip Type"
-                        })
-                      }else{
-                        clearErrors("tripType");
-                      }
 
+                    if (!tripData) {
+                      setError("tripType", {
+                        message: " Please selact  your trip Type",
+                      });
+                    } else {
+                      clearErrors("tripType");
+                    }
                   }}
                   className="p-3 border-2 bg-inherit border-gray-300 rounded-lg "
                 >
-                  <option value="" >Please select a Trip Type</option> 
+                  <option value="">Please select a Trip Type</option>
                   <option value="oneWay">ONE WAY</option>
                   <option value="roundTrip">ROUND TRIP</option>
                   <option value="airPort">AIRPORT</option>
@@ -238,22 +231,24 @@ const BookNowPageCom = () => {
                 )}
                 {airportOpt === "airPort" && (
                   <>
-                  <select
-                    className=" flex items-center mt-5 justify-center p-3 border-2 max-w-[50%] border-gray-300 rounded-lg"
-                    {...register("airPortOptation", {
-                      required: "please select a optaion",
-                    })}
-                  >
-                    <option value="">Please select type</option>
-                    <option value="DropToAirport">Drop to Airport</option>
-                    <option value="PickFromAirport">Pickup from Airport</option>
-                  </select> 
+                    <select
+                      className=" flex items-center mt-5 justify-center p-3 border-2 max-w-[50%] border-gray-300 rounded-lg"
+                      {...register("airPortOptation", {
+                        required: "please select a optaion",
+                      })}
+                    >
+                      <option value="">Please select type</option>
+                      <option value="DropToAirport">Drop to Airport</option>
+                      <option value="PickFromAirport">
+                        Pickup from Airport
+                      </option>
+                    </select>
 
-                  {errors.airPortOptation && (
-                    <h6 className="text-orange-700 ml-3 p-0 my-0">
-                        * {errors.airPortOptation.message} 
-                    </h6>
-                  ) }
+                    {errors.airPortOptation && (
+                      <h6 className="text-orange-700 ml-3 p-0 my-0">
+                        * {errors.airPortOptation.message}
+                      </h6>
+                    )}
                   </>
                 )}
               </div>
@@ -265,11 +260,11 @@ const BookNowPageCom = () => {
           </div>
 
           {/* Right Section (Image) */}
-          <div className="mx-1 md:flex md:w-[49%]  right-0 top-0 md:overflow-hidden">
+          <div className="mx-1 md:flex md:w-[49%] h-auto md:h-[80vh] md:relative md:overflow-hidden border-2 border-green-500">
             <img
               src={BookNowCarImg}
               alt="Book Now poster"
-              className="min-w-full lg:min-h-full object-cover shadow-md rounded-md"
+              className="w-full h-full object-cover shadow-md rounded-md"
             />
           </div>
         </div>
@@ -277,6 +272,5 @@ const BookNowPageCom = () => {
     </>
   );
 };
-
 
 export default BookNowPageCom;
