@@ -8,7 +8,7 @@ import About from '../../Components/AboutUs/About'
 const Home = () => {
   return (
     <>
-      <div className="shadow-sm rounded-md mt-[6rem] min-w-full min-h-screen flex flex-col items-center p-3 my-5 ">
+      <div className="shadow-sm rounded-md mt-[6rem] min-w-full min-h-screen flex flex-col items-center p-3 my-5 border - border-red-800">
         <BookNow/>
         <About/>
         <Feature/>

@@ -17,7 +17,7 @@ const featuresList = [
 const whyRideList = [
   { icon: <FaIndianRupeeSign aria-label="Rupee Icon" />, text: "Multiple Payment Options" },
   { icon: <GiWatch aria-label="Watch Icon" />, text: "Punctuality" },
-  { icon: <IoPricetagsOutline />, text: "Best Price Guarantee" },
+  { icon: <IoPricetagsOutline aria-label='Best Price' />, text: "Best Price Guarantee" },
   { icon: <FaCity aria-label="City Icon" />, text: "Easy Cancellation" },
 ];
 
