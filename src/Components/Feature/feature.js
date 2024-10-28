@@ -1,11 +1,11 @@
 import React from 'react';
 import './feature.css';
-import { IoEarth } from "react-icons/io5";
+import { IoEarth, IoPricetagsOutline } from "react-icons/io5";
 import { GiCityCar, GiWatch } from "react-icons/gi";
 import { FaCity } from "react-icons/fa";
 import { MdOutlinePrivacyTip } from "react-icons/md";
 import { FaIndianRupeeSign } from "react-icons/fa6";
-import Bestprice from '../../Assets/Best_price.png';
+
 
 const featuresList = [
   { icon: <IoEarth aria-label="Earth Icon" />, text: "Anywhere Delivery" },
@@ -17,7 +17,7 @@ const featuresList = [
 const whyRideList = [
   { icon: <FaIndianRupeeSign aria-label="Rupee Icon" />, text: "Multiple Payment Options" },
   { icon: <GiWatch aria-label="Watch Icon" />, text: "Punctuality" },
-  { icon: <img src={Bestprice} alt="Best Price" className="icon" />, text: "Best Price Guarantee" },
+  { icon: <IoPricetagsOutline />, text: "Best Price Guarantee" },
   { icon: <FaCity aria-label="City Icon" />, text: "Easy Cancellation" },
 ];
 
