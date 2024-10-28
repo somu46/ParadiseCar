@@ -43,9 +43,9 @@ const BookNowPageCom = () => {
   return (
     <>
       <div className="  w-full lg:w-[100%] mb-[15rem] lg:mb-3 lg:h-auto flex justify-center items-center text-black ">
-        <div className=" background-image flex flex-wrap flex-col lg:flex-row justify-between border-red-500   border-2 shadow-lg rounded-md w-[100%] h-auto  p-1 lg:overflow-hidden">
+        <div className=" background-image flex flex-wrap flex-col lg:flex-row justify-between shadow-lg rounded-md w-[100%] h-auto  p-1 lg:overflow-hidden">
           {/* Left Section (Form & Text) */}
-          <div className="w-full md:w-1/2 md:h-auto flex flex-col justify-start lg:codep-5 border-2 border-blue-600 ">
+          <div className="w-full md:w-1/2 md:h-auto flex flex-col justify-start lg:codep-5  ">
             <div className="mb-6">
               <h6 className="text-3xl font-bold text-start text-orange-600 mb-2">
                 Booking for Outstation Trip
@@ -260,7 +260,7 @@ const BookNowPageCom = () => {
           </div>
 
           {/* Right Section (Image) */}
-          <div className="mx-1 md:flex md:w-[49%] h-auto md:h-[80vh] md:relative md:overflow-hidden border-2 border-green-500">
+          <div className="mx-1 md:flex md:w-[49%] h-auto md:h-[80vh] md:relative md:overflow-hidden">
             <img
               src={BookNowCarImg}
               alt="Book Now poster"

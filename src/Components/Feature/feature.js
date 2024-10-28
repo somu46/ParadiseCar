@@ -23,7 +23,7 @@ const whyRideList = [
 
 const FeatureBox = ({ icon, text }) => (
   <div className="feature-box">
-    <div className="icon">{icon}</div>
+    <div className="icon ">{icon}</div>
     <p>{text}</p>
   </div>
 );
