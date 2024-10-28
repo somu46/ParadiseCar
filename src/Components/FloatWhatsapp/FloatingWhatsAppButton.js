@@ -4,7 +4,7 @@ import './floatingWhatsAppButton.css';
 
 const FloatingWhatsAppButton = () => {
   const handleWhatsAppClick = () => {
-    window.open('https://wa.me/1234567890', '_blank'); // Replace with your WhatsApp number
+    window.open('https://wa.me/9007837976', '_blank'); // Replace with your WhatsApp number
   };
 
   return (
