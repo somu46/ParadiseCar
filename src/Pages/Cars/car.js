@@ -1,5 +1,6 @@
 import React from 'react';
 import './Cars.css';
+import FloatingWhatsAppButton from "../../Components/FloatWhatsapp/FloatingWhatsAppButton";
 import Xcent from '../../Assets/Xcent.png'
 import Dzire from '../../Assets/Dzire.png'
 import Scorpio from '../../Assets/Scorpio.png'
@@ -19,6 +20,7 @@ const Cars = () => {
 
   return (
     <div className='cars-container'>
+      <FloatingWhatsAppButton/>
       <h1>Available Cars for Rent</h1>
       <div className='cars-grid'>
         {cars.map((car) => (

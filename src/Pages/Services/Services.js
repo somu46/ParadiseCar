@@ -6,7 +6,7 @@ import outstation from '../../Assets/outstation.jpg'
 import kilometer from '../../Assets/kilometer.png'
 import { Button } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
-
+import FloatingWhatsAppButton from "../../Components/FloatWhatsapp/FloatingWhatsAppButton";
 
 
 const Services = () => {
@@ -53,6 +53,7 @@ window.scrollTo(0, 0);
 
   return (
     <div className='service-container'>
+      <FloatingWhatsAppButton/>
       <div className="services">
         <h1>Our Services</h1>
         <div className="service-cards ">

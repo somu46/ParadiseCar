@@ -4,7 +4,7 @@ import Faq from "../../Components/Faqs/faq";
 import BookingP from "../../Components/Booking/bookingP";
 import Testimonial from "../../Components/Testimonial/Testimonial";
 import About from '../../Components/AboutUs/About'
-
+import FloatingWhatsAppButton from "../../Components/FloatWhatsapp/FloatingWhatsAppButton";
 const Home = () => {
   return (
     <>
@@ -15,6 +15,7 @@ const Home = () => {
         <Faq/>
         <BookingP/>
         <Testimonial/>
+        <FloatingWhatsAppButton/>
       </div>
     </>
   );

@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import './About.css';
 import { ContactComponent } from "../Contact/contactUs";
-
+import FloatingWhatsAppButton from "../../Components/FloatWhatsapp/FloatingWhatsAppButton";
 const AboutUs = () => {
   
   useEffect(() => {
@@ -20,6 +20,7 @@ const AboutUs = () => {
 
   return (
     <div className="about-section flex flex-wrap flex-col ">
+      <FloatingWhatsAppButton/>
       <div className="about-wrapper">
         <div className="about-image">
           <img alt="CEO" className="profile-image " />

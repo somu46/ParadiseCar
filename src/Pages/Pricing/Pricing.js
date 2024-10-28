@@ -1,6 +1,6 @@
 import React from 'react';
 import './Pricing.css';
-
+import FloatingWhatsAppButton from "../../Components/FloatWhatsapp/FloatingWhatsAppButton";
 const Pricing = () => {
   // Sample data for vehicles and rates
   const vehicles = [
@@ -13,6 +13,7 @@ const Pricing = () => {
 
   return (
     <div className='pricing-container'>
+      <FloatingWhatsAppButton/>
       <h1>Vehicle Pricing</h1>
       <table className='pricing-table'>
         <thead>
