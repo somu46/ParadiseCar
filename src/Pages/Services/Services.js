@@ -55,15 +55,17 @@ window.scrollTo(0, 0);
     <div className='service-container'>
       <div className="services">
         <h1>Our Services</h1>
-        <div className="service-cards">
+        <div className="service-cards ">
           {services.map((service, index) => (
-            <div className="service-card" key={index}>
-              <img src={service.image} alt={service.title} />
-              <h2>{service.title}</h2>
-              <p>{service.description}</p>
+            <div className="relative service-card" key={index}> {/* Set each card as relative */}
+            <img src={service.image} alt={service.title} />
+            <h2>{service.title}</h2>
+            <p className='md:pb-5'>{service.description}</p>
+            <div className="absolute bottom-0 left-0 w-full  p-4 flex justify-between items-center ">
               <Button className="btn-learn-more" onClick={() => openModal(service)}>Learn More</Button>
               <Button onClick={handleNavigate} variant="outlined">Book Now</Button>
             </div>
+          </div>
           ))}
         </div>
         
