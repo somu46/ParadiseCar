@@ -39,8 +39,8 @@ const Testimonial = () => {
       <div className="testimonials">
         {testimonials.map((testimonial, index) => (
           <div key={index} className="testimonial-card">
-            <img src={testimonial.imageUrl} alt={testimonial.name} className="testimonial-image" />
-            <h3>{testimonial.name}</h3>
+          <div className='flex flex-wrap justify-center '> <img src={testimonial.imageUrl} alt={testimonial.name} className="testimonial-image" /></div>
+            <h3 className='text-sky-700'>{testimonial.name}</h3>
             <p className="role">{testimonial.role}</p>
             <div className="stars">
               {'★'.repeat(testimonial.rating)}{'☆'.repeat(5 - testimonial.rating)}
