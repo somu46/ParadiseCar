@@ -2,11 +2,12 @@
   font-family: 'Arial', sans-serif;
   text-align: center;
   padding: 40px;
+
 }
 
 .features h1, .whyRide h1 {
-  font-size: 24px;
-  font-weight: 600;
+  font-size: 28px;
+  font-weight: 700;
   margin-bottom: 40px;
   color: #34346B;
 }
@@ -15,7 +16,7 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 60px;
+  gap: 40px;
 }
 
 .feature-box {
@@ -23,40 +24,56 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: inherit;
   border: 1.6px solid #CC5500;
-  border-radius: 10px;
-  width: 312px;
-  height: 135px;
+  border-radius: 15px;
+  width: 320px;
+  height: 160px;
   padding: 24px;
-  transition: transform 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   text-align: center;
 }
 
 .feature-box:hover {
   transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 .icon {
-  font-size: 40px;
+  font-size: 44px;
   color: #FFDB58;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 
 .feature-box p {
   margin: 0;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 500;
-  color: #34346B;
+  /* color: #34346B; */
 }
 
-/* Responsive Adjustments */
+/* Mobile Responsiveness */
 @media (max-width: 768px) {
+  .features h1, .whyRide h1 {
+    font-size: 22px;
+  }
+
   .features-container {
     gap: 20px;
   }
 
   .feature-box {
     width: 90%;
+    height: auto;
+    padding: 20px;
+    gap: 10px;
+  }
+
+  .icon {
+    font-size: 36px;
+  }
+
+  .feature-box p {
+    font-size: 16px;
   }
 }
