@@ -7,6 +7,7 @@
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
+  gap: 20px;
 }
 
 .faq-left {
@@ -45,6 +46,7 @@
 .faq-right {
   width: 60%;
 }
+
 /* FAQ Item styling */
 .expand-container {
   background-color: inherit;
@@ -70,7 +72,6 @@
   color: #41479b;
 }
 
-
 /* Content to show/hide */
 .expand-content {
   display: flex;
@@ -78,4 +79,43 @@
   font-size: 16px;
   font-weight: 600;
   color: #41479b;
+}
+
+/* Responsive adjustments for mobile */
+@media (max-width: 768px) {
+  .faqs {
+    flex-direction: column;
+    padding: 20px;
+    gap: 10px;
+  }
+
+  .faq-left, .faq-right {
+    width: 100%;
+    text-align: center;
+  }
+
+  .faq-left h1 {
+    font-size: 28px;
+  }
+
+  .faq-left h3 {
+    font-size: 16px;
+  }
+
+  .faq-left button {
+    padding: 8px 16px;
+    font-size: 13px;
+  }
+
+  .expand-container {
+    padding: 10px 15px;
+  }
+
+  .expand-header {
+    font-size: 15px;
+  }
+
+  .expand-content {
+    font-size: 14px;
+  }
 }
