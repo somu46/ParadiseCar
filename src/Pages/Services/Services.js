@@ -40,6 +40,12 @@ window.scrollTo(0, 0);
       details: 'Flexible kilometer-wise rental options for cost-effective, customized trips.', 
       image: kilometer 
     },
+    { 
+      title: 'Monthly Rental', 
+      description: 'Pay an amount And the Car and Driver is yours for a Month.', 
+      details: 'Flexible kilometer-wise rental options for cost-effective, customized trips.', 
+      image: kilometer 
+    },
   ];
 
   const openModal = (service) => {

@@ -34,13 +34,13 @@ const Footer = ({ isDarkMode }) => {
               to="/Services"
               className="text-xl mx-6 text-center font-bold max-w-[30%] md:max-w-[90%] md:m-3 border-b-2 border-red-600 hover:text-red-600"
             >
-              <p className="flex ">Training</p>
+              <p className="flex ">Services</p>
             </Link>
             <Link
               to="/Services"
               className="max-w-[45%] md:max-w-full text-sm text-center m-1 hover:text-red-600"
             >
-              Driver Training
+              Services
             </Link>
           </div>
           <div className="flex flex-wrap flex-col w-full md:max-w-[20%] h-auto font-semibold m-3 p-4 min-h-9">
@@ -48,10 +48,10 @@ const Footer = ({ isDarkMode }) => {
               to="/"
               className="text-xl font-bold m-3 border-b-2 max-w-[45%] md:max-w-[35%] border-red-600 hover:text-red-600"
             >
-              <p>SERVICES</p>
+              <p>Contact</p>
             </Link>
             <Link
-              to="/Contact"
+              to="/contactUs"
               onClick={handleHistory}
               className="text-sm items-start text-left m-1 hover:text-red-600"
             >
