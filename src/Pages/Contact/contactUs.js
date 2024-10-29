@@ -12,9 +12,9 @@ const ContactComponent = () => {
         <div className="  w-full lg:max-w-6xl flex flex-col lg:flex-row justify-center font-semibold text-2xl lg:text-3xl  m-0 lg:mx-auto mb-10 space-y-5 lg:space-y-0 overflow-hidden">
           <ContactForm />
           <Office />
-          <Social/>
           <FloatingWhatsAppButton/>
         </div>
+          <Social/>
       </div>
     </>
   );
