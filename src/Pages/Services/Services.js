@@ -4,6 +4,7 @@ import './Services.css';
 import Airport from '../../Assets/Airport.png'
 import outstation from '../../Assets/outstation.jpg'
 import kilometer from '../../Assets/kilometer.png'
+import Calendar from '../../Assets/calendar.png'
 import { Button } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 import FloatingWhatsAppButton from "../../Components/FloatWhatsapp/FloatingWhatsAppButton";
@@ -44,7 +45,7 @@ window.scrollTo(0, 0);
       title: 'Monthly Rental', 
       description: 'Pay an amount And the Car and Driver is yours for a Month.', 
       details: 'Flexible kilometer-wise rental options for cost-effective, customized trips.', 
-      image: kilometer 
+      image: Calendar 
     },
   ];
 

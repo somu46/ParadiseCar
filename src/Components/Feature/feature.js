@@ -3,9 +3,10 @@ import './feature.css';
 import { IoEarth, IoPricetagsOutline } from "react-icons/io5";
 import { GiCityCar, GiWatch } from "react-icons/gi";
 import { FaCity } from "react-icons/fa";
-import { MdOutlinePrivacyTip } from "react-icons/md";
+import { MdOutlinePrivacyTip,MdVerified } from "react-icons/md";
 import { FaIndianRupeeSign } from "react-icons/fa6";
-
+import { TbHours24 } from "react-icons/tb";
+import { ImCancelCircle } from "react-icons/im";
 
 const featuresList = [
   { icon: <IoEarth aria-label="Earth Icon" />, text: "Anywhere Delivery" },
@@ -18,7 +19,9 @@ const whyRideList = [
   { icon: <FaIndianRupeeSign aria-label="Rupee Icon" />, text: "Multiple Payment Options" },
   { icon: <GiWatch aria-label="Watch Icon" />, text: "Punctuality" },
   { icon: <IoPricetagsOutline aria-label='Best Price' />, text: "Best Price Guarantee" },
-  { icon: <FaCity aria-label="City Icon" />, text: "Easy Cancellation" },
+  { icon: <MdVerified />, text: "Verified Drivers" },
+  { icon: <ImCancelCircle />, text: "Easy Cancellation" },
+  { icon: <TbHours24 />, text: "24 x 7 Service" },
 ];
 
 const FeatureBox = ({ icon, text }) => (
