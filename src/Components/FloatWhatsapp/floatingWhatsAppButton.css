@@ -19,7 +19,7 @@
   cursor: pointer;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: background-color 0.3s;
-  font-size: 28px; /* Increase icon size */
+  font-size: 25px; /* Increase icon size */
 }
 
 .floating-button:hover {

@@ -17,10 +17,10 @@ const Cars = () => {
     { id: 2, name: 'Suzuki Dzire', image: Dzire, description: 'Stylish and powerful', seat:'4' },
     { id: 3, name: 'Toyota Innova', image: Innova, description: 'Stylish and powerful', seat:'7' },
     { id: 4, name: 'Mahindra Scorpio', image: Scorpio , description: 'Stylish and powerful', seat:'7' },
-    { id: 5, name: 'Mahindra Bolero', image: Bolero , description: 'Stylish and powerful', seat:'10' },
-    { id: 6, name: 'Suzuki Ertiga', image: Ertiga , description: 'Stylish and powerful', seat:'7' },
-    { id: 7, name: 'Toyota Innova Crysta', image: Crysta , description: 'Stylish and powerful', seat:'7' },
-    { id: 8, name: 'Mahindra XUV', image: XUV500 , description: 'Stylish and powerful', seat:'7' },
+    { id: 5, name: 'Suzuki Ertiga', image: Ertiga , description: 'Stylish and powerful', seat:'7' },
+    { id: 6, name: 'Toyota Innova Crysta', image: Crysta , description: 'Stylish and powerful', seat:'7' },
+    { id: 7, name: 'Mahindra XUV', image: XUV500 , description: 'Stylish and powerful', seat:'7' },
+    { id: 8, name: 'Mahindra Bolero', image: Bolero , description: 'Stylish and powerful', seat:'10' },
     { id: 9, name: 'Force Traveller', image: Traveller , description: 'Stylish and powerful', seat:'26' },
   ];
 
@@ -34,7 +34,7 @@ const Cars = () => {
             <img src={car.image} alt={car.name} className='car-image' />
             <h2 className='car-name'>{car.name}</h2>
             <p className='car-description'>{car.description}</p>
-            <p className='Seat'>{car.seat}</p>
+            <p className='Seat'>Seat Capacity : <b>{car.seat}</b></p>
           </div>
         ))}
       </div>
