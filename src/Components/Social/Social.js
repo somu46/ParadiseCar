@@ -6,7 +6,6 @@ import './social.css';
 const Social = () => {
   return (
     <div className="social-container">
-      <h2 className="contact-title">Contact Information</h2>
       <div className="icon-group">
         <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" className="social-icon facebook">
           <FaFacebook aria-label="Facebook" />

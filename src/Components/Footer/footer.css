@@ -1,35 +1,114 @@
-.footer{
-    font-size: small;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 300;
-    border: 3px solid #dfdede;   
+.footer {
+  font-size: 14px;
+  border-top: 1px solid #e0e0e0;
+  padding: 20px 0;
+  color: inherit;
 }
-.element {
-  border-bottom: 1px dashed #F2F2F2;  
-  }
-  
-.seva{
-    color:#04fb0c ;
-    display: inline;
+
+/* Footer Grid Layout */
+.footer-grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: 30% 20% 20% 30%;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
-.ride{
-    color: #fbc918 ;
-    display: inline;
+
+.footer-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
-/*chatgpt*/
-.footer.light {
-    background-color: inherit;
-    color: #101111;
+
+.logo-section {
+  text-align: left;
+}
+
+.footer-heading {
+  color: #fbc918;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.footer-link {
+  display: block;
+  margin-bottom: 8px;
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+  color: #fbc918;
+}
+
+.newsletter-form {
+  display: flex;
+  margin-top: 10px;
+}
+
+.footer-input {
+  padding: 8px;
+  border: 1px solid #dfdede;
+  border-radius: 4px;
+  width: 70%;
+  margin-right: 8px;
+}
+
+.footer-button {
+  background-color: #00aaff;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-logo{
+  width: 150px;
+  height: 100px;
+}
+
+.footer-button:hover {
+  background-color: #007acc;
+  transform: scale(1.05);
+}
+
+/* Social Icons */
+.social-icons {
+  display: flex;
+  gap: 12px;
+}
+
+.social-link {
+  color: inherit;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.social-link:hover {
+  color: #fbc918;
+}
+
+/* Bottom Section */
+.footer-bottom {
+  border-top: 1px solid #e0e0e0;
+  padding-top: 20px;
+  margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer-grid {
+      grid-template-columns: 1fr;
+      text-align: center;
   }
   
-  .footer.dark {
-    background-color: inherit;
-    color: white;
+  .footer-section {
+      text-align: center;
   }
-  
-  .footer .text-black {
-    color: white; /* Inherit the color based on dark or light mode */
-  }
-  
+}

@@ -22,7 +22,7 @@ const HeroSection = () => {
       <div className="hero-content">
         <h1 className="hero-title">Welcome to <span>Paradise Car Rental</span> <br/>Your Trusted Car Rental Partner</h1>
         <p className="hero-description">
-          Embark on a seamless journey with Rentax, where convenience meets reliability. We take pride in offering a fleet of top-quality vehicles to suit your every need. Whether it's a business trip, family vacation, or a weekend getaway, Rentax ensures a hassle-free experience from start to finish.
+          Embark on a seamless journey with Paradise Car rental, where convenience meets reliability. We take pride in offering a fleet of top-quality vehicles to suit your every need. Whether it's a business trip, family vacation, or a weekend getaway, Paradise Car rental ensures a hassle-free experience from start to finish.
         </p>
         <ul className="features-list">
           <li>✔ Budget-Friendly Explorers</li>
