@@ -11,7 +11,7 @@ const Home = () => {
   console.log("isStoreDarkMood",isStoreDarkMode);
   return (
     <>
-      <div className="shadow-sm rounded-md mt-[6rem] min-w-full min-h-screen flex flex-col items-center p-3 my-5 border - border-red-800">
+      <div className="shadow-sm rounded-md lg:mt-[6rem] mt-[6rem] min-w-full min-h-screen flex flex-col items-center lg:p-3 lg:my-5">
         <BookNow/>
         <About/>
         <Feature/>

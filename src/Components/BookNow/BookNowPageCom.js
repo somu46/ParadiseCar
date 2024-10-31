@@ -4,7 +4,7 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import useStore from "../../Store/store";
 import BookNowButton from "../../Components/Button/Button";
-import BookNowCarImg from "../../Assets/Subho bijaya.jpeg";
+import BookNowCarImg from "../../Assets/HappyDiwali.jpg";
 
 import "./BookNow.css";
 

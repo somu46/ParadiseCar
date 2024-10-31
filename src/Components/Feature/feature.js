@@ -7,6 +7,7 @@ import { MdOutlinePrivacyTip,MdVerified } from "react-icons/md";
 import { FaIndianRupeeSign } from "react-icons/fa6";
 import { TbHours24 } from "react-icons/tb";
 import { ImCancelCircle } from "react-icons/im";
+import useStore from '../../Store/store';
 
 const featuresList = [
   { icon: <IoEarth aria-label="Earth Icon" />, text: "Anywhere Delivery" },
@@ -25,13 +26,16 @@ const whyRideList = [
 ];
 
 const FeatureBox = ({ icon, text }) => (
-  <div className="feature-box">
+  <div className="feature-box border border-orange-600">
     <div className="icon ">{icon}</div>
     <p>{text}</p>
   </div>
 );
 
 const Feature = () => {
+
+// const {isStoreDarkMode}=useStore();
+
   return (
     <div className="feature-container">
       <section className="features">
