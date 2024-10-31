@@ -17,14 +17,14 @@ const Testimonial = () => {
       name: 'Jit Paul',
       role: 'Customer',
       rating: 5,
-      review: 'Rentax provided me with an exceptional rental experience. From the moment I made my reservation online to returning the vehicle.',
+      review: 'Paradise Car rental provided me with an exceptional rental experience. From the moment I made my reservation online to returning the vehicle.',
       imageUrl: jit,
     },
     {
       name: 'Rajdeep Sarkar',
       role: 'Customer',
       rating: 5,
-      review: 'I’ve rented cars from various companies, but Rentax truly stands out. Not only did they offer competitive prices.',
+      review: 'I’ve rented cars from various companies, but Paradise Car rental truly stands out. Not only did they offer competitive prices.',
       imageUrl: rajdip,
     },
     {
