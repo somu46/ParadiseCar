@@ -8,7 +8,7 @@ const BookingP = () => {
     <div className="booking-container ">
       <h2>How to Book a Ride</h2>
       <div className="process-row">
-        <div className="process">
+        <div className="process border-2 border-orange-500">
           <div className="circle green">
             <FontAwesomeIcon icon={faCalendarAlt} />
           </div>
@@ -17,7 +17,7 @@ const BookingP = () => {
           </div>
         </div>
         <FontAwesomeIcon className="arrow" icon={faArrowRight} />
-        <div className="process">
+        <div className="process border-2 border-orange-500">
           <div className="circle blue">
             <FontAwesomeIcon icon={faCar} />
           </div>
@@ -26,7 +26,7 @@ const BookingP = () => {
           </div>
         </div>
         <FontAwesomeIcon className="arrow" icon={faArrowRight} />
-        <div className="process">
+        <div className="process border-2 border-orange-500">
           <div className="circle pink">
             <FontAwesomeIcon icon={faIdCard} />
           </div>
@@ -35,7 +35,7 @@ const BookingP = () => {
           </div>
         </div>
         <FontAwesomeIcon className="arrow" icon={faArrowRight} />
-        <div className="process">
+        <div className="process border-2 border-orange-500">
           <div className="circle yellow">
             <FontAwesomeIcon icon={faCreditCard} />
           </div>
