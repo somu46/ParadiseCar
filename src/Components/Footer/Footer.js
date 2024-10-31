@@ -1,16 +1,19 @@
 import React from "react";
 import "./footer.css";
 import { Link } from "react-router-dom";
+import useStore from "../../Store/store";
 
-const Footer = ({ isDarkMode }) => {
-  const handleHistory = () => {
+const Footer = () => {
+
+  const {isStoreDarkMode}=useStore();
+    const handleHistory = () => {
     window.scrollTo(0, 0);
   };
 
   return (
     <footer
       className={`footer ${
-        isDarkMode ? "bg-gray-900 text-white" : "bg-gray-100 text-slate-600"
+        isStoreDarkMode ? "bg-gray-900 text-white" : "bg-gray-100 text-slate-600"
       } overflow-x-hidden min-w-[100%] shadow-lg rounded-lg`}
     >
       <div className="flex flex-wrap flex-col justify-center md:flex-row md:justify-evenly min-w-full min-h-10 p-4 mx-1 mt-3 element">
@@ -19,7 +22,7 @@ const Footer = ({ isDarkMode }) => {
             <Link
               to="/"
               className={`flex flex-row text-xl md:text-3xl font-bold md:m-3 text-left hover:${
-                isDarkMode ? "text-blue-300" : "text-pink-700"
+                isStoreDarkMode ? "text-blue-300" : "text-pink-700"
               } hover:scale-110 hover:border-2 transition-all duration-300 ease-in-out hover:tracking-wider`}
             >
               <p className="seva">Paradise </p>
@@ -70,7 +73,7 @@ const Footer = ({ isDarkMode }) => {
                 type="email"
                 name="Email"
                 className={`border-gray-500 rounded-xl w-full md:w-64 lg:w-75 xl:w-120 border px-4 py-2 ${
-                  isDarkMode ? "bg-gray-700 text-white" : "bg-white "
+                  isStoreDarkMode ? "bg-gray-700 text-white" : "bg-white "
                 }`}
               />
               <button
