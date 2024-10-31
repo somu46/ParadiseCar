@@ -5,7 +5,7 @@ import { faCalendarAlt, faCar, faIdCard, faCreditCard, faArrowRight } from '@for
 
 const BookingP = () => {
   return (
-    <div className="booking-container">
+    <div className="booking-container ">
       <h2>How to Book a Ride</h2>
       <div className="process-row">
         <div className="process">
