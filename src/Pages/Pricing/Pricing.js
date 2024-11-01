@@ -4,14 +4,14 @@ import FloatingWhatsAppButton from "../../Components/FloatWhatsapp/FloatingWhats
 const Pricing = () => {
   // Sample data for vehicles and rates
   const vehicles = [
-    { id: 1, type: 'Hyundai Xcent', rate1: '₹500', rate2: '₹1000', rate3: '₹1500' , rate4: '₹15' },
-    { id: 2, type: 'Suzuki Dzire', rate1: '₹600', rate2: '₹1100', rate3: '₹1600', rate4: '₹15'},
-    { id: 3, type: 'Toyota Innova', rate1: '₹800', rate2: '₹1500', rate3: '₹2000', rate4: '₹15' },
-    { id: 4, type: 'Mahindra Scorpio', rate1: '₹900', rate2: '₹1600', rate3: '₹2100', rate4: '₹15' },
-    { id: 4, type: 'Suzuki Ertiga', rate1: '₹900', rate2: '₹1600', rate3: '₹2100', rate4: '₹15' },
-    { id: 4, type: 'Toyota Innova Crysta', rate1: '₹900', rate2: '₹1600', rate3: '₹2100', rate4: '₹15' },
-    { id: 4, type: 'Mahindra XUV 500', rate1: '₹900', rate2: '₹1600', rate3: '₹2100', rate4: '₹15' },
-    { id: 5, type: 'Force Traveller', rate1: '₹1500', rate2: '₹2500', rate3: '₹3500', rate4: '₹15' },
+    { id: 1, type: 'Hyundai Xcent', rate1: '₹1200', rate2: '₹2000', rate3: '₹2500' , rate4: '₹16' },
+    { id: 2, type: 'Suzuki Dzire', rate1: '₹1300', rate2: '₹2200', rate3: '₹2600', rate4: '₹17'},
+    { id: 3, type: 'Toyota Innova', rate1: '₹1000', rate2: '₹2200', rate3: '₹3000', rate4: '₹25' },
+    { id: 4, type: 'Mahindra Scorpio', rate1: '₹1000', rate2: '₹2200', rate3: '₹3000', rate4: '₹25' },
+    { id: 4, type: 'Suzuki Ertiga', rate1: '₹1000', rate2: '₹1800', rate3: '₹2300', rate4: '₹20' },
+    { id: 4, type: 'Toyota Innova Crysta', rate1: '₹1400', rate2: '₹2200', rate3: '₹3200', rate4: '₹27' },
+    { id: 4, type: 'Mahindra XUV 500', rate1: '₹1400', rate2: '₹2200', rate3: '₹3200', rate4: '₹27' },
+    // { id: 5, type: 'Force Traveller', rate1: '₹1500', rate2: '₹2500', rate3: '₹3500', rate4: '₹15' },
   ];
 
   return (
