@@ -7,7 +7,7 @@ import { MdOutlinePrivacyTip,MdVerified } from "react-icons/md";
 import { FaIndianRupeeSign } from "react-icons/fa6";
 import { TbHours24 } from "react-icons/tb";
 import { ImCancelCircle } from "react-icons/im";
-import useStore from '../../Store/store';
+// import useStore from '../../Store/store';
 
 const featuresList = [
   { icon: <IoEarth aria-label="Earth Icon" />, text: "Anywhere Delivery" },

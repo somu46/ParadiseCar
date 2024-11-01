@@ -8,10 +8,10 @@ const Pricing = () => {
     { id: 2, type: 'Suzuki Dzire', rate1: '₹1300', rate2: '₹2200', rate3: '₹2600', rate4: '₹17'},
     { id: 3, type: 'Toyota Innova', rate1: '₹1000', rate2: '₹2200', rate3: '₹3000', rate4: '₹25' },
     { id: 4, type: 'Mahindra Scorpio', rate1: '₹1000', rate2: '₹2200', rate3: '₹3000', rate4: '₹25' },
-    { id: 4, type: 'Suzuki Ertiga', rate1: '₹1000', rate2: '₹1800', rate3: '₹2300', rate4: '₹20' },
-    { id: 4, type: 'Toyota Innova Crysta', rate1: '₹1400', rate2: '₹2200', rate3: '₹3200', rate4: '₹27' },
-    { id: 4, type: 'Mahindra XUV 500', rate1: '₹1400', rate2: '₹2200', rate3: '₹3200', rate4: '₹27' },
-    // { id: 5, type: 'Force Traveller', rate1: '₹1500', rate2: '₹2500', rate3: '₹3500', rate4: '₹15' },
+    { id: 5, type: 'Suzuki Ertiga', rate1: '₹1000', rate2: '₹1800', rate3: '₹2300', rate4: '₹20' },
+    { id: 6, type: 'Toyota Innova Crysta', rate1: '₹1400', rate2: '₹2200', rate3: '₹3200', rate4: '₹27' },
+    { id: 7, type: 'Mahindra XUV 500', rate1: '₹1400', rate2: '₹2200', rate3: '₹3200', rate4: '₹27' },
+    // { id: 8, type: 'Force Traveller', rate1: '₹1500', rate2: '₹2500', rate3: '₹3500', rate4: '₹15' },
   ];
 
   return (
